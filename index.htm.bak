@@ -1,9 +1,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!-- saved from url=(0055)https://dl.dropboxusercontent.com/u/31754139/index.html -->
-<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=Big5">
-
-<title>NCKU DropHoyuan</title>
-<style type="text/css">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="application/xhtml+xml; charset=utf-8" http-equiv="content-type" />
+    <title>NCKU DropHoyuan</title>
+    <style type="text/css">
 <!--
 body,td,th {
 	color: #FFF;
@@ -14,8 +15,7 @@ body {
 a {
 	color:#FFF}
 -->
-</style>
-<script language="javascript">
+</style> <script language="javascript">
 function handleKeyPress(evt)
 {
 	var nbr = (window.event)?event.keyCode:evt.which;
@@ -45,249 +45,185 @@ function handleKeyPress(evt)
 }
 document.onkeydown= handleKeyPress
 </script></head>
-
-
-<body>
-<table>
-<tbody><tr>
-<td><h3><font color="blue">@ NCKU DropHoyuan</font></h3></td>
-<td>[<a href="https://dl.dropboxusercontent.com/u/31754139/main.html">Hoyuan DropMain</a>]&nbsp;&nbsp;<!--<a href="#" onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://ncku.istyle.idv.tw/');">³]¬°­º­¶</a>&nbsp;&nbsp;--><a href="https://dl.dropboxusercontent.com/u/31754139/m.html">[¤â¾÷ª©]</a>&nbsp;&nbsp;<!--[<a href="http://myweb.ncku.edu.tw/~n97001138/ncku/">myweb.ncku</a>]-->&nbsp;
-</td>
-</tr>
-
-</tbody></table>
-<!--<h2>
-EMB°Ñ¦Ò¸ê®Æ¤À¬y: <a href="http://lab.istyle.idv.tw/~hoyuan/b5emb/">¥D¯¸</a>&nbsp;&nbsp;<a href="http://ww.istyle.idv.tw/tmp/b5emb/">³Æ¯¸</a><br /><br /><br />
-</h2>-->
-<a name="G"></a><a href="http://www.google.com.tw/">Google</a>&nbsp;&nbsp;<a href="https://drive.google.com/drive/my-drive">GµwºĞ</a>&nbsp;&nbsp;<a href="http://translate.google.com/">G¦r¨å</a>&nbsp;&nbsp;<a href="https://dl.dropboxusercontent.com/u/31754139/nckummn.html">MMN_PRJ</a>&nbsp;&nbsp;&nbsp;&nbsp;(((&nbsp;<a href="http://x.ms/xms/">XMS</a>&nbsp;&nbsp;<a href="http://localhost:8090/">LocalMySQL</a>&nbsp;)))<br>
-<a href="http://www.youtube.com/">YouTube</a>(<a href="https://www.youtube.com/channel_switcher">ÀW¹D</a>)&nbsp;&nbsp;<a href="https://www.google.com.tw/maps/">GMAP·s</a><!--(<a href="https://www.google.com/maps?output=classic">ÂÂ</a>)--> <a href="https://mapsengine.google.com/map/?pli=1">§Úªº¦a¹Ï</a>(<a href="http://x.ms/xms/content/show.php?id=559">¦æ</a> <a href="http://x.ms/xms/content/show.php?id=557">¥x</a> <a href="http://x.ms/xms/content/show.php?id=558">¥@</a> <a href="https://www.facebook.com/groups/1646103045661674/">FB</a>) <a href="https://www.here.com/">HERE¦a¹Ï</a><!--(<a href="http://maps.google.com.tw/maps">·s</a>)-->&nbsp;&nbsp;<a href="https://mail.google.com/mail/?tab=cm">Gmail</a>&nbsp;&nbsp;<a href="http://www.google.com/calendar">¤é¾ä</a>&nbsp;&nbsp;<br>
-<br>
-<a href="http://tw.yahoo.com/">Yahoo!</a><br>
-<a href="http://zh.wikipedia.org/wiki/Wiki">Wiki</a><br>
-<a name="Y"></a><a href="http://tw.bid.yahoo.com/">Y©ç</a><br>
-<a name="R"></a><a href="http://www.ruten.com.tw/">R©ç</a><br>
-<!--<a href="http://feebee.com.tw">­¸¤ñ»ù®æ</a><br />-->
-<a href="http://www.taobao.com/">²^Ä_</a><br>
-<!--<a href="http://shopping.pchome.com.tw/">PÁÊ</a><br />
-<a href="http://store.pchome.com.tw/">P©±</a><br />
-<a href="http://www.appledaily.com.tw/">Ä«ªG¤é³ø</a><br />
-<a href="http://udn.com/">Áp¦X³ø</a><br />
-<a href="http://nomap.gaeo.org/">§K¬~¦a¹Ï</a>&nbsp;&nbsp;<br />-->
-
-<br \="">
-<a name="L"></a><a href="http://tw.dictionary.yahoo.com/">Y¦r¨å</a>&nbsp;&nbsp;<a href="http://translate.google.com/">G¦r¨å</a>&nbsp;&nbsp;<br>
-<a href="http://frdic.com/">ªk»y¦r¨å</a><br>
-<a href="http://howdoyou.do/">howdoyou.do</a><br>
-<a href="http://www.ascc.sinica.edu.tw/iascc/netsrv/speed/">ºô¸ô´ú³t</a><br>
-<!--<a href="http://spoon.net/">spoon¶³ºİ</a><br />-->
-
-<br \="">
-<a name="T"></a><a href="http://twtraffic.tra.gov.tw/twrail/">¤õ¨®®É¨èªí</a>&nbsp;<a href="http://twtraffic.tra.gov.tw/twrail/mobile/home.aspx">¤â¾÷ª©</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://twtraffic.tra.gov.tw/twrail/mobile/home.aspx">¤â¾÷ª©</a><br>
-<!--¡@¡@1040403_04®É¨èªí: <a href="1040403_04HighSpeedRail/index.html">°ªÅK</a>&nbsp;<a href="1040403_Rail/index.html">¥xÅK¥h</a>&nbsp;<a href="1040404_Rail/index.html">¥xÅK¦^</a>&nbsp;<br />-->
-<a href="http://www.thsrc.com.tw/">¥xÆW°ª³tÅK¸ô</a>&nbsp;<a href="http://www.thsrc.com.tw/tw/Article/ArticleContent/530e869c-479d-441a-a4b4-61a8166827e9">¾Ç¥Í²¼~</a>&nbsp;<!--<a href="http://www.thsrc.com.tw/tw/Article/ArticleContent/78af7cae-50ba-4ba0-93ba-f0afa9571565">¾Ç¥Í2015/4/2~7²M©ú°²´Á²¨¹B´Á¶¡¾A¥Î¨®¦¸</a>--><br>
-<a href="http://www.krtco.com.tw/train_info/train_timetable.aspx">°ª¶¯±¶¹B­º¥½¯Z¨®®É¶¡</a>&nbsp;<a href="http://www.krtco.com.tw/train_info/train_timeschedule.aspx">¯¸¶¡¦æ¾p®É¶¡</a>&nbsp;<a href="http://www.c-bike.com.tw/">¤½¦@¸}½ñ¨®</a>&nbsp;<br>
-<a href="http://www.gdbus.com.tw/">°ª¶¯¤½¨®</a>&nbsp;<a href="http://122.146.229.210/bus/Dybus.aspx">¨®½ø°ÊºA¬d¸ß</a>&nbsp;(¤@¯ë12)(¬õ10)(¬õ11)(¤@¯ë69)<br>
-<a href="https://css.fetc.net.tw/CS/CS02010Traffic/TrafficQuery">»·³q¹q¦¬eTag¬d¸ß</a>&nbsp;<a href="http://tw.piliapp.com/tw-highway/">°ê¹D­pµ{¦¬¶O¸ÕºâWebApp</a><br>
-<a href="http://www.cwb.gov.tw/">¤¤¥¡®ğ¶H§½</a>&nbsp;<a href="http://www.dgpa.gov.tw/">¤H¨Æ¦æ¬F§½</a><br>
-<br>
-
-<a href="https://www.google.com.tw/alerts#">Google§Ö°T(·s»D§Ö°T)</a><br>
-<a name="W"></a><a href="https://www.wunderlist.com/">Wunderlist©_§®²M³æ</a>&nbsp;&nbsp;<br>
-<a href="https://calendar.sunrise.am/">Sunrise Calendar</a>&nbsp;&nbsp;<br>
-<a name="F"></a><a href="https://www.facebook.com/">Facebook</a><br>
-<!--<a href="https://web.whatsapp.com">What's APPºô­¶ª©</a><br />-->
-<a name="E"></a><a href="https://www.evernote.com/Login.action?targetUrl=%2FHome.action">Evernote</a>&nbsp;&nbsp;<br>
-<a name="D"></a><a href="https://www.dropbox.com/home">Dropbox</a><br>
-<a href="http://www.asuswebstorage.com/">Webstorage</a><br>
-<a href="https://www.google.com/settings/chrome/sync">Chrome¦P¨B</a>&nbsp;&nbsp;<br>
-<a href="https://www.box.com/">Box.net</a><br>
-<a name="7"></a><a href="http://www.ibon.com.tw/0100/file_upload.aspx">7-11 ibon¤W¶Ç</a>&nbsp;&nbsp;<br>
-<!--<a href="http://www.runtastic.com/zh/users/jogi-jogi-2/sport-sessions">Run Tastic</a><br />
+  <body>
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <h3><font color="blue">@ NCKU DropHoyuan</font></h3>
+          </td>
+          <td>[<a href="main.html">Hoyuan DropMain</a>]Â Â <!--<a href="#" onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://ncku.istyle.idv.tw/');">è¨­ç‚ºé¦–é </a>&nbsp;&nbsp;--><a
+              href="m.html">[æ‰‹
+              æ©Ÿç‰ˆ]</a>Â Â <!--[<a href="http://myweb.ncku.edu.tw/~n97001138/ncku/">myweb.ncku</a>]-->Â 
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!--<h2>
+EMBåƒè€ƒè³‡æ–™åˆ†æµ: <a href="http://lab.istyle.idv.tw/~hoyuan/b5emb/">ä¸»ç«™</a>&nbsp;&nbsp;<a href="http://ww.istyle.idv.tw/tmp/b5emb/">å‚™ç«™</a><br /><br /><br /></h2>-->
+    <a name="G"></a><a href="http://www.google.com.tw/">Google</a>Â Â <a href="https://drive.google.com/drive/my-drive">G
+      ç¡¬ç¢Ÿ</a>Â Â <a href="http://translate.google.com/">Gå­—å…¸</a>Â Â <a href="https://dl.dropboxusercontent.com/u/31754139/nckummn.html">MMN_PRJ</a>Â Â Â Â (((Â <a
+      href="http://x.ms/xms/">XMS</a>Â Â <a
+      href="http://localhost:8090/">LocalMySQL</a>Â )))<br />
+    <a href="http://www.youtube.com/">YouTube</a>(<a href="https://www.youtube.com/channel_switcher">é »
+      é“</a>)Â Â <a href="https://www.google.com.tw/maps/">GMAPæ–°</a><!--(<a href="https://www.google.com/maps?output=classic">èˆŠ</a>)-->
+    <a href="https://mapsengine.google.com/map/?pli=1">æˆ‘çš„åœ°åœ–a</a>(<a href="http://x.ms/xms/content/show.php?id=559">è¡Œ</a>
+    <a href="http://x.ms/xms/content/show.php?id=557">å°</a> <a href="http://x.ms/xms/content/show.php?id=558">ä¸–</a>
+    <a href="https://www.facebook.com/groups/1646103045661674/">FB</a>) <a href="https://www.here.com/">HERE
+      åœ°åœ–</a><!--(<a href="http://maps.google.com.tw/maps">æ–°</a>)-->Â Â <a href="https://mail.google.com/mail/?tab=cm">Gmail</a>Â Â <a
+      href="http://www.google.com/calendar">æ—¥
+      æ›†</a>Â Â <br />
+    <br />
+    <a href="http://tw.yahoo.com/">Yahoo!</a><br />
+    <a href="http://zh.wikipedia.org/wiki/Wiki">Wiki</a><br />
+    <a name="Y"></a><a href="http://tw.bid.yahoo.com/">Yæ‹</a><br />
+    <a name="R"></a><a href="http://www.ruten.com.tw/">Ræ‹</a><br />
+    <!--<a href="http://feebee.com.tw">é£›æ¯”åƒ¹æ ¼</a><br />--> <a href="http://www.taobao.com/">æ·˜
+      å¯¶</a><br />
+    <!--<a href="http://shopping.pchome.com.tw/">Pè³¼</a><br />
+<a href="http://store.pchome.com.tw/">Påº—</a><br /><a href="http://www.appledaily.com.tw/">è˜‹æœæ—¥å ±</a><br /><a href="http://udn.com/">è¯åˆå ±</a><br /><a href="http://nomap.gaeo.org/">å…æ´—åœ°åœ–</a>&nbsp;&nbsp;<br />-->
+    <br \="" />
+    <a name="L"></a><a href="http://tw.dictionary.yahoo.com/">Yå­—å…¸</a>Â Â <a href="http://translate.google.com/">G
+      å­—å…¸</a>Â Â <br />
+    <a href="http://frdic.com/">æ³•èªå­—å…¸</a><br />
+    <a href="http://howdoyou.do/">howdoyou.do</a><br />
+    <a href="http://www.ascc.sinica.edu.tw/iascc/netsrv/speed/">ç¶²è·¯æ¸¬é€Ÿ</a><br />
+    <!--<a href="http://spoon.net/">spooné›²ç«¯</a><br />--> <br \="" />
+    <a name="T"></a><a href="http://twtraffic.tra.gov.tw/twrail/">ç«è»Šæ™‚åˆ»è¡¨</a>Â <a href="http://twtraffic.tra.gov.tw/twrail/mobile/home.aspx">æ‰‹
+      æ©Ÿç‰ˆ</a>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â <a href="http://twtraffic.tra.gov.tw/twrail/mobile/home.aspx">æ‰‹
+      æ©Ÿç‰ˆ</a><br />
+    <!--ã€€ã€€1040403_04æ™‚åˆ»è¡¨: <a href="1040403_04HighSpeedRail/index.html">é«˜éµ</a>&nbsp;<a href="1040403_Rail/index.html">å°éµå»</a>&nbsp;<a href="1040404_Rail/index.html">å°éµå›</a>&nbsp;<br />-->
+    <a href="http://www.thsrc.com.tw/">å°ç£é«˜é€Ÿéµè·¯</a>Â <a href="http://www.thsrc.com.tw/tw/Article/ArticleContent/530e869c-479d-441a-a4b4-61a8166827e9">å­¸
+      ç”Ÿç¥¨~</a>Â <!--<a href="http://www.thsrc.com.tw/tw/Article/ArticleContent/78af7cae-50ba-4ba0-93ba-f0afa9571565">å­¸ç”Ÿ2015/4/2~7æ¸…æ˜å‡æœŸç–é‹æœŸé–“é©ç”¨è»Šæ¬¡</a>--><br />
+    <a href="http://www.krtco.com.tw/train_info/train_timetable.aspx">é«˜é›„æ·é‹é¦–æœ«ç­è»Šæ™‚é–“</a>Â <a
+      href="http://www.krtco.com.tw/train_info/train_timeschedule.aspx">ç«™
+      é–“è¡Œé§›æ™‚é–“</a>Â <a href="http://www.c-bike.com.tw/">å…¬å…±è…³è¸è»Š</a>Â <br />
+    <a href="http://www.gdbus.com.tw/">é«˜é›„å…¬è»Š</a>Â <a href="http://122.146.229.210/bus/Dybus.aspx">è»Š
+      è¼›å‹•æ…‹æŸ¥è©¢</a>Â (ä¸€èˆ¬12)(ç´…10)(ç´…11)(ä¸€èˆ¬69)<br />
+    <a href="https://css.fetc.net.tw/CS/CS02010Traffic/TrafficQuery">é é€šé›»æ”¶eTagæŸ¥è©¢</a>Â <a
+      href="http://tw.piliapp.com/tw-highway/">åœ‹
+      é“è¨ˆç¨‹æ”¶è²»è©¦ç®—WebApp</a><br />
+    <a href="http://www.cwb.gov.tw/">ä¸­å¤®æ°£è±¡å±€</a>Â <a href="http://www.dgpa.gov.tw/">äºº
+      äº‹è¡Œæ”¿å±€</a><br />
+    <br />
+    <a href="https://www.google.com.tw/alerts#">Googleå¿«è¨Š(æ–°èå¿«è¨Š)</a><br />
+    <a name="W"></a><a href="https://www.wunderlist.com/">Wunderlistå¥‡å¦™æ¸…å–®</a>Â Â <br />
+    <a href="https://calendar.sunrise.am/">Sunrise Calendar</a>Â Â <br />
+    <a name="F"></a><a href="https://www.facebook.com/">Facebook</a><br />
+    <!--<a href="https://web.whatsapp.com">What's APPç¶²é ç‰ˆ</a><br />--> <a name="E"></a><a
+      href="https://www.evernote.com/Login.action?targetUrl=%2FHome.action">Evernote</a>Â Â <br />
+    <a name="D"></a><a href="https://www.dropbox.com/home">Dropbox</a><br />
+    <a href="http://www.asuswebstorage.com/">Webstorage</a><br />
+    <a href="https://www.google.com/settings/chrome/sync">ChromeåŒæ­¥</a>Â Â <br />
+    <a href="https://www.box.com/">Box.net</a><br />
+    <a name="7"></a><a href="http://www.ibon.com.tw/0100/file_upload.aspx">7-11
+      ibonä¸Šå‚³</a>Â Â <br />
+    <!--<a href="http://www.runtastic.com/zh/users/jogi-jogi-2/sport-sessions">Run Tastic</a><br />
 <a href="http://www.marathonsworld.com/artapp/mywall.php?uid=67842">MarathonsWorld</a><br />-->
-<a href="http://www.coolpc.com.tw/">­ì»ù«Î</a>&nbsp;&nbsp;<a href="http://www.coolpc.com.tw/evaluate.php">³ø»ù³æ</a>&nbsp;&nbsp;<a href="http://www.coolpc.com.tw/m/">¤â¾÷ª©</a>&nbsp;&nbsp;<br>
-¡@¡@³ø»ù³æ:<a href="http://deyuan-pc.com.tw/evaluate/">¼w·½¹q¸£</a>&nbsp;&nbsp;<a href="http://www.isunfar.com.tw/product/ecdiy.aspx">¶¶µo</a>&nbsp;&nbsp;<a href="http://www.computerdiy.com.tw/guanghuamall-quote">¥úµØ</a>&nbsp;&nbsp;<a href="http://www.eclife.com.tw/diy/?TabCat=1">¨}¿³</a>&nbsp;&nbsp;<br><br>
-
-<a href="http://www.backpackers.com.tw/forum/">­I¥]«È´Ì</a>&nbsp;&nbsp;<a href="http://www.backpackers.com.tw/forum/forumdisplay.php?f=103">¥xÆW¦Û§U®È¦æ§ä¦ñ </a>&nbsp;&nbsp;<a href="http://www.backpackers.com.tw/forum/forumdisplay.php?f=110">¹ÎÅé®È¹C©Û¶Ò</a>&nbsp;&nbsp;<a href="http://www.backpackers.com.tw/forum/group.php?groupid=230">¤C¦~¯Å­I¥]À°</a>&nbsp;&nbsp;<a href="http://www.backpackers.com.tw/forum/forumdisplay.php?f=170">¦P¦n¥æ½Ë</a>&nbsp;&nbsp;<a href="http://bbs.mychat.to/index.php?hpmode=2">¼Æ¦ì¨k¤k</a>&nbsp;&nbsp;<br>
-<a href="http://www.nesexpress.com/intertime.htm">¥@¬É®É¶¡</a>&nbsp;&nbsp;<a href="http://www.oanda.com/currency/converter/">Oanda¶×²v</a>&nbsp;&nbsp;<a href="http://www.cwb.gov.tw/V7/forecast/world/world_ea.htm">°ê»Ú³£¥«®ğ·Å</a>&nbsp;&nbsp;<a href="http://www.cwb.gov.tw/">¤¤¥¡®ğ¶H§½</a>&nbsp;&nbsp;<a href="http://webcam.www.gov.tw/">´ºÂI§Y®É</a>&nbsp;&nbsp;<a href="http://1968.freeway.gov.tw/cctv">¤½¸ô§Y®É</a>&nbsp;<br><br>
-
-<a name="B"></a><a href="http://www.ksml.edu.tw/">°ª¶¯¥«¹Ï</a>&nbsp;&nbsp;<a href="http://webpac.ksml.edu.tw/webpacIndex.jsp">À]ÂÃ¬d¸ß</a>&nbsp;&nbsp;<a href="http://lib.ebookservice.tw/ks">¥xÆW¶³ºİ®Ñ®w</a><br>
-<!--<a href="http://recreation.forest.gov.tw/askformonhouse/AskForMainB.aspx">ªL°È§½ ¤s«Î¥Ó½Ğ</a><br />-->
-
-<br>
-<a name="M"></a><a href="https://mail.google.com/mail/?tab=cm">Gmail</a><br>
-<a href="http://cspwater.com/webmail">iStyleMail</a><br>
-<a href="http://mail.ncku.edu.tw/">NckuMail</a><br>
-<!--<a href="http://db.tt/Gztrd48">Invite Hoyuan Dropbox</a><br />
-<a href="http://db.tt/fnfZzfm">Invite Chengyu Dropbox</a><br />-->
-<br \="">
-<a name="N"></a><a href="http://www.ncku.edu.tw/">¦¨¤j­º­¶</a>&nbsp;<a href="http://web.ncku.edu.tw/files/11-1000-6149-1.php">¦æ¨Æ¾ä</a>&nbsp;<a href="http://main.oga.ncku.edu.tw/files/11-1076-1099.php">®Õ¤º¤À¾÷</a>[<a href="http://www.ncku.edu.tw/biochem/notebook_stu/ext.htm">¤À¾÷ªí2</a>]<br>
-<a href="http://cte.acad.ncku.edu.tw/">¦¨¤j®v°ö¤¤¤ß</a><br>
-<a href="http://i.ncku.edu.tw/">¦¨¤j¤J¤f</a>&nbsp;<a href="http://moodle.ncku.edu.tw/">¦¨¤jMoodle</a>&nbsp;<a href="http://course-query.acad.ncku.edu.tw/qry/">¦¨¤j¬d½Ò¨t²Î</a>&nbsp;<a href="http://course.ncku.edu.tw/course/index.php?type=an">¦¨¤j¿ï½Ò¨t²Î</a>&nbsp;<a href="http://cid.acad.ncku.edu.tw/bin/home.php">½Ò°È²Õ</a><br>
-<a href="http://www.lib.ncku.edu.tw/">¦¨¤jÁ`¹Ï</a>&nbsp;&nbsp;<a href="http://weblis.lib.ncku.edu.tw/">À]ÂÃ¬d¸ß</a>&nbsp;&nbsp;<font color="#888888">rpa.lib.ncku.edu.tw(proxy.lib.ncku.edu.tw):3128</font><br \="">
-&nbsp;&nbsp;<a href="http://muse.lib.ncku.edu.tw:8080/SSO/ResourceStation/pages/index.jsp">µn¤JµØÃÀ</a>&nbsp;&nbsp;<a href="http://www.lib.ncku.edu.tw/www2008/search/eresource.html">¹q¤l¸ê·½</a>&nbsp;&nbsp;<font color="#888888">¤Ñ¤UÂø»x¸sª¾ÃÑ®w&nbsp;°Ó·~©P¥Zª¾ÃÑ®w(Áp¦Xª¾ÃÑ®w)&nbsp;¤j­^¦Ê¬ì¥ş®Ñ&nbsp;</font><br \="">
-<a href="http://myweb.ncku.edu.tw/~n97001138/">¦¨¤j­Ó¤Hºô­¶</a><br>
-<!--<a href="http://lab.istyle.idv.tw/">¦¨¤jLABºô­¶</a><br />-->
-<!--<a href="http://140.116.215.149/~hoyuan/ncku/">¦¨¤jLAB­Ó¤Hºô­¶</a><br />-->
-<!--<a href="\\winxp-1\c$\windows\system32/8080\drive\window\yuan\">¦¨¤jEEPC</a><br />-->
-<a href="https://sslvpn.twaren.net/">¦¨¤jVPN</a>&nbsp;<font color="#888888">sslvpn.twaren.net</font><br>
-<a href="http://www.cc.ncku.edu.tw/certif/">¦¨¤j¸ê°T»{ÃÒ¤¤¤ß</a><br>
-<a href="http://websys.secr.ncku.edu.tw/act/index.php?c=auth">¦¨¤j¬¡°Ê³ø¦W¨t²Î</a><br>
-<a href="http://twpat.tipo.gov.tw/">¥xÆW±M§QÀË¯Á</a><br>
-<a href="http://ndltd.ncl.edu.tw/">»OÆW³ÕºÓ½×¤å¸ê®Æ®w</a><br>
-<a href="http://ieeexplore.ieee.org/">ieeexplore</a><br>
-<br \="">
-<a href="http://yct.acad.ncku.edu.tw/">¶³¹Å«n±Ğ¾Ç¤¤¤ß</a><br>
-<!--<a href="http://yct.ncku.edu.tw/site2/yct/web/activity/event_news_list.php">¶³¹Å«nTA¬ã²ß</a><br />
-<a href="http://yct.ncku.edu.tw/site2/yct/web/tutor/notes.php">¶³¹Å«nTA½Ò»²³ø¦W</a><br />
-<a href="http://yct.ncku.edu.tw/site2/yct/web/tutor/index.php">¶³¹Å«nTA½Ò»²</a><br />-->
-<br \="">
-<a href="http://kkp.nsysu.edu.tw/">°ª°ª«Ì±Ğ¾Ç¤¤¤ß</a><br>
-<!--<a href="http://summer.kkp.nsysu.edu.tw/sumboard.php">°ª°ª«Ì®L¤é¤j¾Ç</a><br />-->
-<a href="http://140.127.41.21/ecad/postr/book.asp?admin=exit-admin&amp;">§Ó¤u¬¡°Ê</a><br>
-
-<br \="">
-<!--<a href="http://www.wtuc.edu.tw/">¤åÄ¦­º­¶</a>&nbsp;&nbsp;<a href="http://ma.wtuc.edu.tw/bin/home.php">·|Ä³¨t²Î</a>&nbsp;&nbsp;<a href="http://a001.wtuc.edu.tw/front/bin/asoannlist.phtml?anncg=7">¤ÀÃş¤½§i</a>&nbsp;&nbsp;<a href="http://wenzaofleci.wtuc.edu.tw/front/bin/home.phtml">¥~»y¨t</a>&nbsp;&nbsp;<br \>-->
-<!--<a href="http://www.fy.edu.tw/">»²­^­º­¶</a>&nbsp;&nbsp;<a href="http://cos.fy.edu.tw/fywww/new/new_info/cos_info/yco_3100.asp">½Òµ{¬d¸ß</a>&nbsp;&nbsp;<a href="http://web.fy.edu.tw/ezfiles/0/1000/img/261/calendar.pdf">¦æ¨Æ¾ä</a>&nbsp;&nbsp;<br \>-->
-<a href="http://www.nsysu.edu.tw/">¤¤¤s­º­¶</a>&nbsp;&nbsp;<a href="http://selcrs.nsysu.edu.tw/">¿ï½Ò¨t²Î</a>&nbsp;&nbsp;<a href="http://oaa.nsysu.edu.tw/files/40-1004-1896-1.php">¦æ¨Æ¾ä</a>&nbsp;&nbsp;<br \="">
-°ª®v¤j<a href="http://www.nknu.edu.tw/~course/choose/">½Òµ{¬d¸ß</a>&nbsp;&nbsp;<br \="">
-<br \="">
-
-<a href="http://www.idealcard.com.tw/net_1.php">¤¤µØ¦p·N¥d</a>
-
-
-<br \="">
-<!--
-<br \>
-
-<table>
-
-  <tr>
-  <td>
-   &nbsp;
-  </td>
-  <td>
-   &nbsp;
-  </td>
-
-  <tr>
-  <td>
-   &nbsp;
-  </td>
-  <td>
-   &nbsp;
-  </td>
-
-  
-  <tr>
-  <td>
-   &nbsp;
-  </td>
-  <td>
-   &nbsp;
-  </td>
-
-  
-  <tr>
-  <td>
-   <!--d2_10:30MMN-->
-  
-  
-   <a href="http://140.116.226.211/">MMN¹êÅç«Ç</a>&nbsp;&nbsp;
-  
-<!--
-  <tr>
-  <td>
-   &nbsp;
-  </td>
-  <td>
-   &nbsp;
-  </td>
-
-  <tr>
-  <td>
-   &nbsp;
-  </td>
-  <td>
-   &nbsp;
-  </td>
-  
-  <tr>
-  <td>
-   &nbsp;
-  </td>
-  <td>
-   &nbsp;
-  </td>
-
-
-  <tr>
-  <td>
-   &nbsp;
-  </td>
-  <td>
-   &nbsp;
-  </td>
--->
-  
-  
-   &nbsp;
-  
-  
-   &nbsp;
-  
-
- 
-  
-   ¤U¸ü
-  
-  
-   <a href="https://drive.google.com/folderview?id=0B5B7myi2bdsZWGZ6N0JhbS0zMWs&amp;usp=sharing">docu¤å¥ó</a>&nbsp;&nbsp;<br>
-   <a href="https://docs.google.com/folder/d/0B__kgjYOWV6oUUFaVV9sTHVoeEE/edit?pli=1&amp;docId=0B__kgjYOWV6oZW91NlhjaXVrZE0">tools¤u¨ã</a>&nbsp;&nbsp;<br>
-   <a href="http://pan.baidu.com/s/1bnnGkKB">soft³nÅé</a>&nbsp;&nbsp;<br>
-  
-
- 
-  
-   &nbsp;
-  
-  
-   <a href="http://url.istyle.idv.tw/">Scuttle Bookmark</a>&nbsp;<!--[<a href="http://myweb.ncku.edu.tw/~n97001138/ncku/">myweb.ncku</a>]-->&nbsp;
-  
-  
-<!-- <tr>
-  <td>
-   [<a href="./main.html">Hoyuan DropMain</a>]&nbsp;[<a href="http://myweb.ncku.edu.tw/~n97001138/ncku/">myweb.ncku</a>]&nbsp;
-  </td>
-  <td>
-   &nbsp;
-  </td>
--->
- 
-  
-   <!--[<a href="http://dl.dropbox.com/u/31754139/translate.html">My Google Â½Ä¶</a>]-->&nbsp;<!--[<a href="http://myweb.ncku.edu.tw/~n97001138/ncku/">myweb.ncku</a>]-->&nbsp;
-  
-  
-   &nbsp;
-  
-  
-
-
-&nbsp;&nbsp;<a href="https://www.google.com/settings/chrome/sync">Chrome¦P¨B</a><br>
-&nbsp;&nbsp;<a href="https://dl.dropboxusercontent.com/u/31754139/index.html"></a><br>
-
-<!--<iframe frameborder="no" height="100" scrolling="no" src="http://www.gingersoftware.com/widget/index.html?buyNowUrl=http%3A//www.gingersoftware.com/grammar_checker_2/%3Fbanid%3Dho-1062%26affId%3Dho-1062%26cpn%3D4" width="100%">Sorry, we can't display the widget.</iframe>-->
-
-<!--<table>
-
-<tr>
-<td>
-<iframe frameborder="no" height="200" scrolling="no" src="http://blog.istyle.idv.tw/ad.html" width="100%">Sorry, we can't display the widget.</iframe>
-</td>
-<td>
-<div align='left'><embed name='BlogAD732' pluginspage='http://www.macromedia.com/go/getflashplayer' src='http://www.blogad.com.tw/images/732_108.swf?P=hoyuan&BM_ID=241806&C=B&BS=dotted&BT=180&BA=left' width='732' height='108' wmode='transparent'></embed><img width=0 height=0 src='http://www.blogad.com.tw/Transfer/TrackH.aspx?BM_ID=241806&M=732'></div>
-</td>
-</tr>
-</table>-->
-
-
-</body></html>
+    <a href="http://www.coolpc.com.tw/">åŸåƒ¹å±‹</a>Â Â <a href="http://www.coolpc.com.tw/evaluate.php">å ±
+      åƒ¹å–®</a>Â Â <a href="http://www.coolpc.com.tw/m/">æ‰‹æ©Ÿç‰ˆ</a>Â Â <br />
+    ã€€ã€€å ±åƒ¹å–®:<a href="http://deyuan-pc.com.tw/evaluate/">å¾·æºé›»è…¦</a>Â Â <a href="http://www.isunfar.com.tw/product/ecdiy.aspx">é †
+      ç™¼</a>Â Â <a href="http://www.computerdiy.com.tw/guanghuamall-quote">å…‰è¯</a>Â Â <a
+      href="http://www.eclife.com.tw/diy/?TabCat=1">è‰¯
+      èˆˆ</a>Â Â <br />
+    <br />
+    <a href="http://www.backpackers.com.tw/forum/">èƒŒåŒ…å®¢æ£§</a>Â Â <a href="http://www.backpackers.com.tw/forum/forumdisplay.php?f=103">å°
+      ç£è‡ªåŠ©æ—…è¡Œæ‰¾ä¼´ </a>Â Â <a href="http://www.backpackers.com.tw/forum/forumdisplay.php?f=110">åœ˜
+      é«”æ—…éŠæ‹›å‹Ÿ</a>Â Â <a href="http://www.backpackers.com.tw/forum/group.php?groupid=230">ä¸ƒ
+      å¹´ç´šèƒŒåŒ…å¹«</a>Â Â <a href="http://www.backpackers.com.tw/forum/forumdisplay.php?f=170">åŒ
+      å¥½äº¤èª¼</a>Â Â <a href="http://bbs.mychat.to/index.php?hpmode=2">æ•¸ä½ç”·å¥³</a>Â Â <br />
+    <a href="http://www.nesexpress.com/intertime.htm">ä¸–ç•Œæ™‚é–“</a>Â Â <a href="http://www.oanda.com/currency/converter/">Oanda
+      åŒ¯ç‡</a>Â Â <a href="http://www.cwb.gov.tw/V7/forecast/world/world_ea.htm">åœ‹éš›éƒ½
+      å¸‚æ°£æº«</a>Â Â <a href="http://www.cwb.gov.tw/">ä¸­å¤®æ°£è±¡å±€</a>Â Â <a href="http://webcam.www.gov.tw/">æ™¯
+      é»å³æ™‚</a>Â Â <a href="http://1968.freeway.gov.tw/cctv">å…¬è·¯å³æ™‚</a>Â <br />
+    <br />
+    <a name="B"></a><a href="http://www.ksml.edu.tw/">é«˜é›„å¸‚åœ–</a>Â Â <a href="http://webpac.ksml.edu.tw/webpacIndex.jsp">é¤¨
+      è—æŸ¥è©¢</a>Â Â <a href="http://lib.ebookservice.tw/ks">å°ç£é›²ç«¯æ›¸åº«</a><br />
+    <!--<a href="http://recreation.forest.gov.tw/askformonhouse/AskForMainB.aspx">æ—å‹™å±€ å±±å±‹ç”³è«‹</a><br />-->
+    <br />
+    <a name="M"></a><a href="https://mail.google.com/mail/?tab=cm">Gmail</a><br />
+    <a href="http://cspwater.com/webmail">iStyleMail</a><br />
+    <a href="http://mail.ncku.edu.tw/">NckuMail</a><br />
+    <!--<a href="http://db.tt/Gztrd48">Invite Hoyuan Dropbox</a><br />
+<a href="http://db.tt/fnfZzfm">Invite Chengyu Dropbox</a><br />--> <br \="" />
+    <a name="N"></a><a href="http://www.ncku.edu.tw/">æˆå¤§é¦–é </a>Â <a href="http://web.ncku.edu.tw/files/11-1000-6149-1.php">è¡Œ
+      äº‹æ›†</a>Â <a href="http://main.oga.ncku.edu.tw/files/11-1076-1099.php">æ ¡å…§åˆ†æ©Ÿ</a>[<a
+      href="http://www.ncku.edu.tw/biochem/notebook_stu/ext.htm">åˆ†
+      æ©Ÿè¡¨2</a>]<br />
+    <a href="http://cte.acad.ncku.edu.tw/">æˆå¤§å¸«åŸ¹ä¸­å¿ƒ</a><br />
+    <a href="http://i.ncku.edu.tw/">æˆå¤§å…¥å£</a>Â <a href="http://moodle.ncku.edu.tw/">æˆ
+      å¤§Moodle</a>Â <a href="http://course-query.acad.ncku.edu.tw/qry/">æˆå¤§æŸ¥èª²ç³»çµ±</a>Â <a
+      href="http://course.ncku.edu.tw/course/index.php?type=an">æˆ
+      å¤§é¸èª²ç³»çµ±</a>Â <a href="http://cid.acad.ncku.edu.tw/bin/home.php">èª²å‹™çµ„</a><br />
+    <a href="http://www.lib.ncku.edu.tw/">æˆå¤§ç¸½åœ–</a>Â Â <a href="http://weblis.lib.ncku.edu.tw/">é¤¨
+      è—æŸ¥è©¢</a>Â Â <font color="#888888">rpa.lib.ncku.edu.tw(proxy.lib.ncku.edu.tw):3128</font><br
+      \="" />
+    Â Â <a href="http://muse.lib.ncku.edu.tw:8080/SSO/ResourceStation/pages/index.jsp">ç™»
+      å…¥è¯è—</a>Â Â <a href="http://www.lib.ncku.edu.tw/www2008/search/eresource.html">é›»
+      å­è³‡æº</a>Â Â <font color="#888888">å¤©ä¸‹é›œèªŒç¾¤çŸ¥è­˜åº«Â å•†æ¥­å‘¨åˆŠçŸ¥è­˜åº«(è¯åˆçŸ¥è­˜åº«)Â å¤§è‹±ç™¾ç§‘å…¨æ›¸Â </font><br \="" />
+    <a href="http://myweb.ncku.edu.tw/%7En97001138/">æˆå¤§å€‹äººç¶²é </a><br />
+    <!--<a href="http://lab.istyle.idv.tw/">æˆå¤§LABç¶²é </a><br />-->
+    <!--<a href="http://140.116.215.149/~hoyuan/ncku/">æˆå¤§LABå€‹äººç¶²é </a><br />-->
+    <!--<a href="\\winxp-1\c$\windows\system32/8080\drive\window\yuan\">æˆå¤§EEPC</a><br />-->
+    <a href="https://sslvpn.twaren.net/">æˆå¤§VPN</a>Â <font color="#888888">sslvpn.twaren.net</font><br />
+    <a href="http://www.cc.ncku.edu.tw/certif/">æˆå¤§è³‡è¨Šèªè­‰ä¸­å¿ƒ</a><br />
+    <a href="http://websys.secr.ncku.edu.tw/act/index.php?c=auth">æˆå¤§æ´»å‹•å ±åç³»çµ±</a><br />
+    <a href="http://twpat.tipo.gov.tw/">å°ç£å°ˆåˆ©æª¢ç´¢</a><br />
+    <a href="http://ndltd.ncl.edu.tw/">è‡ºç£åšç¢©è«–æ–‡è³‡æ–™åº«</a><br />
+    <a href="http://ieeexplore.ieee.org/">ieeexplore</a><br />
+    <br \="" />
+    <a href="http://yct.acad.ncku.edu.tw/">é›²å˜‰å—æ•™å­¸ä¸­å¿ƒ</a><br />
+    <!--<a href="http://yct.ncku.edu.tw/site2/yct/web/activity/event_news_list.php">é›²å˜‰å—TAç ”ç¿’</a><br />
+<a href="http://yct.ncku.edu.tw/site2/yct/web/tutor/notes.php">é›²å˜‰å—TAèª²è¼”å ±å</a><br /><a href="http://yct.ncku.edu.tw/site2/yct/web/tutor/index.php">é›²å˜‰å—TAèª²è¼”</a><br />-->
+    <br \="" />
+    <a href="http://kkp.nsysu.edu.tw/">é«˜é«˜å±æ•™å­¸ä¸­å¿ƒ</a><br />
+    <!--<a href="http://summer.kkp.nsysu.edu.tw/sumboard.php">é«˜é«˜å±å¤æ—¥å¤§å­¸</a><br />-->
+    <a href="http://140.127.41.21/ecad/postr/book.asp?admin=exit-admin&amp;">å¿—å·¥æ´»
+      å‹•</a><br />
+    <br \="" />
+    <!--<a href="http://www.wtuc.edu.tw/">æ–‡è—»é¦–é </a>&nbsp;&nbsp;<a href="http://ma.wtuc.edu.tw/bin/home.php">æœƒè­°ç³»çµ±</a>&nbsp;&nbsp;<a href="http://a001.wtuc.edu.tw/front/bin/asoannlist.phtml?anncg=7">åˆ†é¡å…¬å‘Š</a>&nbsp;&nbsp;<a href="http://wenzaofleci.wtuc.edu.tw/front/bin/home.phtml">å¤–èªç³»</a>&nbsp;&nbsp;<br \>-->
+    <!--<a href="http://www.fy.edu.tw/">è¼”è‹±é¦–é </a>&nbsp;&nbsp;<a href="http://cos.fy.edu.tw/fywww/new/new_info/cos_info/yco_3100.asp">èª²ç¨‹æŸ¥è©¢</a>&nbsp;&nbsp;<a href="http://web.fy.edu.tw/ezfiles/0/1000/img/261/calendar.pdf">è¡Œäº‹æ›†</a>&nbsp;&nbsp;<br \>-->
+    <a href="http://www.nsysu.edu.tw/">ä¸­å±±é¦–é </a>Â Â <a href="http://selcrs.nsysu.edu.tw/">é¸
+      èª²ç³»çµ±</a>Â Â <a href="http://oaa.nsysu.edu.tw/files/40-1004-1896-1.php">è¡Œäº‹æ›†</a>Â Â <br
+      \="" />
+    é«˜å¸«å¤§<a href="http://www.nknu.edu.tw/%7Ecourse/choose/">èª²ç¨‹æŸ¥è©¢</a>Â Â <br \="" />
+    <br \="" />
+    <a href="http://www.idealcard.com.tw/net_1.php">ä¸­è¯å¦‚æ„å¡</a> <br \="" />
+    <!--
+<br \><table>
+  <tr>  <td>   &nbsp;  </td>
+  <td>   &nbsp;  </td>
+  <tr>  <td>   &nbsp;  </td>
+  <td>   &nbsp;  </td>
+    <tr>  <td>   &nbsp;
+  </td>  <td>   &nbsp;  </td>
+    <tr>  <td>
+   <!--d2_10:30MMN--> <a href="http://140.116.226.211/">MMNå¯¦é©—å®¤</a>Â Â 
+    <!--
+  <tr>  <td>   &nbsp;  </td>
+  <td>   &nbsp;  </td>
+  <tr>  <td>   &nbsp;  </td>
+  <td>   &nbsp;  </td>  
+  <tr>  <td>   &nbsp;  </td>
+  <td>   &nbsp;  </td>
+  <tr>  <td>   &nbsp;
+  </td>  <td>   &nbsp;  </td>
+--> Â  Â  ä¸‹è¼‰ <a href="https://drive.google.com/folderview?id=0B5B7myi2bdsZWGZ6N0JhbS0zMWs&amp;usp=sharing">docu
+      æ–‡ä»¶</a>Â Â <br />
+    <a href="https://docs.google.com/folder/d/0B__kgjYOWV6oUUFaVV9sTHVoeEE/edit?pli=1&amp;docId=0B__kgjYOWV6oZW91NlhjaXVrZE0">tools
+      å·¥å…·</a>Â Â <br />
+    <a href="http://pan.baidu.com/s/1bnnGkKB">softè»Ÿé«”</a>Â Â <br />
+    Â  <a href="http://url.istyle.idv.tw/">Scuttle Bookmark</a>Â <!--[<a href="http://myweb.ncku.edu.tw/~n97001138/ncku/">myweb.ncku</a>]-->Â 
+    <!-- <tr>
+  <td>   [<a href="./main.html">Hoyuan DropMain</a>]&nbsp;[<a href="http://myweb.ncku.edu.tw/~n97001138/ncku/">myweb.ncku</a>]&nbsp;  </td>  <td>
+   &nbsp;  </td>-->
+    <!--[<a href="http://dl.dropbox.com/u/31754139/translate.html">My Google ç¿»è­¯</a>]-->Â <!--[<a href="http://myweb.ncku.edu.tw/~n97001138/ncku/">myweb.ncku</a>]-->Â 
+    Â  Â Â <a href="https://www.google.com/settings/chrome/sync">ChromeåŒæ­¥</a><br />
+    Â Â <a href="https://dl.dropboxusercontent.com/u/31754139/index.html"></a><br />
+    <!--<iframe frameborder="no" height="100" scrolling="no" src="http://www.gingersoftware.com/widget/index.html?buyNowUrl=http%3A//www.gingersoftware.com/grammar_checker_2/%3Fbanid%3Dho-1062%26affId%3Dho-1062%26cpn%3D4" width="100%">Sorry, we can't display the widget.</iframe>-->
+    <!--<table>
+<tr><td><iframe frameborder="no" height="200" scrolling="no" src="http://blog.istyle.idv.tw/ad.html" width="100%">Sorry, we can't display the widget.</iframe>
+</td><td><div align='left'><embed name='BlogAD732' pluginspage='http://www.macromedia.com/go/getflashplayer' src='http://www.blogad.com.tw/images/732_108.swf?P=hoyuan&BM_ID=241806&C=B&BS=dotted&BT=180&BA=left' width='732' height='108' wmode='transparent'></embed><img width=0 height=0 src='http://www.blogad.com.tw/Transfer/TrackH.aspx?BM_ID=241806&M=732'></div></td>
+</tr></table>-->
+  </body>
+</html>
