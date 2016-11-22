@@ -77,8 +77,9 @@ function ShowTime(){
         口述稿</a></p>
     <hr> <a name="G"></a><a href="http://www.google.com.tw/">Google</a>&nbsp;&nbsp;<a
       href="https://drive.google.com/drive/my-drive">G
-      硬碟</a>&nbsp;&nbsp;<a href="http://translate.google.com/">G字典</a>&nbsp;&nbsp;&nbsp;&nbsp;(((&nbsp;<a
-      href="http://x.ms/xms/">XMS</a>&nbsp;&nbsp;<a
+      硬碟</a>&nbsp;&nbsp;<a href="http://translate.google.com/">G字典</a>&nbsp;&nbsp;<a
+      href="http://tw.dictionary.yahoo.com/">Y
+      字典</a>&nbsp;&nbsp; (((&nbsp;<a href="http://x.ms/xms/">XMS</a>&nbsp;&nbsp;<a
       href="http://localhost:8090/">LocalMySQL</a>&nbsp;)))<br>
     <a href="http://www.youtube.com/">YouTube</a>(<a href="https://www.youtube.com/channel_switcher">頻
       道</a>,<a href="https://www.youtube.com/dashboard">創作者工作室</a>,<a href="http://www.downvids.net/">批
