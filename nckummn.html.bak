@@ -61,6 +61,14 @@ function ShowTime(){
   <body onload="ShowTime()">
     <!--@NCKU_MMN_Web ByHoyuan-->
     <div id="showbox">@NCKU_MMN_Web ByHoyuan (2016/9/19 21:36:31) </div>
+    <p>106<br>
+      ├ 05/13 原
+        始期刊 ; <a href="https://goo.gl/QBoHGA">G 報告</a> (口述稿在下方附註) 論文進度<br>
+      ├ 02/25 
+        原 始期刊 ; <a href="https://goo.gl/uYvwhV">G 報告</a> (口述稿在下方附註)
+      論文進度<br>
+      <br>
+    </p>
     <p>105<br>
       ├ 12/03 <a href="https://drive.google.com/open?id=0BwqzBGEB86M7cy1rbk0tZkp6Z0E">原
         始期刊</a> ; <a href="https://goo.gl/0VMTrQ">G 報告</a> (口述稿在下方附註) 論文進度<br>
@@ -100,7 +108,7 @@ function ShowTime(){
             [<a href="https://www.youtube.com/">YouTube</a>] [<a href="https://www.youtube.com/my_videos?o=U">影
               片管理員</a>]&nbsp; [<a href="https://goo.gl/">G 縮網址</a>]&nbsp;<a href="http://www.extractpdf.com/">PDFtoTXT</a>&nbsp;[<a
               href="http://www.pdfunlock.com/">PDF
-              解鎖</a>]<br>
+              解鎖</a>] [<a href="http://freemypdf.com/">PDF 解鎖2</a>]<br>
             <br>
             快捷2: [<a href="https://prezi.com/your/">P簡報</a>] [<a href="https://drive.google.com/drive/my-drive">G
               硬碟</a>] [<a href="http://translate.google.com/">G字典</a>] [<a href="http://tw.dictionary.yahoo.com/">Y
@@ -212,7 +220,8 @@ function ShowTime(){
           <tr>
             <td>(12_IJTR)<br>
             </td>
-            <td><a target="_blank" href="http://onlinelibrary.wiley.com/journal/10.1002/(ISSN)1522-1970/issues">12.International Journal of Tourism Research</a>(SSCI)<br>
+            <td><a target="_blank" href="http://onlinelibrary.wiley.com/journal/10.1002/%28ISSN%291522-1970/issues">12.International
+                Journal of Tourism Research</a>(SSCI)<br>
             </td>
             <td><br>
             </td>
