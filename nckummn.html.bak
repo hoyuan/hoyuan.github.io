@@ -62,8 +62,9 @@ function ShowTime(){
     <!--@NCKU_MMN_Web ByHoyuan-->
     <div id="showbox">@NCKU_MMN_Web ByHoyuan (2016/9/19 21:36:31) </div>
     <p>106<br>
-      ├ 05/13 原 始期刊 ; <a href="https://goo.gl/QBoHGA">G 報告</a> (口述稿在下方附註)
-      <a href="https://goo.gl/20Xs82">報告表格</a> 論文進度<br>
+      <br>
+      ├ 05/13 原 始期刊 ; <a href="https://goo.gl/QBoHGA">G 報告</a> (口述稿在下方附註) <a href="https://goo.gl/20Xs82">報
+        告表格</a> <a href="https://goo.gl/NTCL8I">論文進度</a><br>
       ├ 02/25 原 始期刊 ; <a href="https://goo.gl/uYvwhV">G 報告</a> (口述稿在下方附註)<br>
       <br>
     </p>
@@ -200,14 +201,14 @@ function ShowTime(){
           </tr>
           <tr>
             <td>(10_T&amp;I)</td>
-            <td> <a target="_blank" href="http://www.sciencedirect.com/science/journal/07365853">10.
+            <td> <a target="_blank" href="http://www.sciencedirect.com/science/journal/07365853">10.[sciencedirect] 
                 Telematics and Informatics</a>(SSCI)&nbsp;</td>
             <td>(成大)(高師大)</td>
           </tr>
           <tr>
             <td>(11_CHB)<br>
             </td>
-            <td><a target="_blank" href="http://www.sciencedirect.com/science/journal/07475632">11.
+            <td><a target="_blank" href="http://www.sciencedirect.com/science/journal/07475632">11.[sciencedirect] 
                 Computers in Human Behavior</a>(SSCI)<br>
             </td>
             <td><br>
@@ -218,7 +219,7 @@ function ShowTime(){
           <tr>
             <td>(12_IJTR)<br>
             </td>
-            <td><a target="_blank" href="http://onlinelibrary.wiley.com/journal/10.1002/%28ISSN%291522-1970/issues">12.International
+            <td><a target="_blank" href="http://onlinelibrary.wiley.com/journal/10.1002/%28ISSN%291522-1970/issues">12.[wiley] International
                 Journal of Tourism Research</a>(SSCI)<br>
             </td>
             <td><br>
@@ -227,10 +228,10 @@ function ShowTime(){
             </td>
           </tr>
           <tr>
-            <td><br>
+            <td>(13_IBR)<br>
             </td>
-            <td><br>
-            </td>
+            <td><a target="_blank" href="http://www.sciencedirect.com/science/journal/09695931">13.[sciencedirect] International
+                Business Review</a>(SSCI) </td>
             <td><br>
             </td>
             <td><br>
