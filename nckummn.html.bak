@@ -201,14 +201,14 @@ function ShowTime(){
           </tr>
           <tr>
             <td>(10_T&amp;I)</td>
-            <td> <a target="_blank" href="http://www.sciencedirect.com/science/journal/07365853">10.[sciencedirect] 
+            <td> <a target="_blank" href="http://www.sciencedirect.com/science/journal/07365853">10.[sciencedirect]
                 Telematics and Informatics</a>(SSCI)&nbsp;</td>
             <td>(成大)(高師大)</td>
           </tr>
           <tr>
             <td>(11_CHB)<br>
             </td>
-            <td><a target="_blank" href="http://www.sciencedirect.com/science/journal/07475632">11.[sciencedirect] 
+            <td><a target="_blank" href="http://www.sciencedirect.com/science/journal/07475632">11.[sciencedirect]
                 Computers in Human Behavior</a>(SSCI)<br>
             </td>
             <td><br>
@@ -219,8 +219,8 @@ function ShowTime(){
           <tr>
             <td>(12_IJTR)<br>
             </td>
-            <td><a target="_blank" href="http://onlinelibrary.wiley.com/journal/10.1002/%28ISSN%291522-1970/issues">12.[wiley] International
-                Journal of Tourism Research</a>(SSCI)<br>
+            <td><a target="_blank" href="http://onlinelibrary.wiley.com/journal/10.1002/%28ISSN%291522-1970/issues">12.[wiley]
+                International Journal of Tourism Research</a>(SSCI)<br>
             </td>
             <td><br>
             </td>
@@ -230,8 +230,37 @@ function ShowTime(){
           <tr>
             <td>(13_IBR)<br>
             </td>
-            <td><a target="_blank" href="http://www.sciencedirect.com/science/journal/09695931">13.[sciencedirect] International
-                Business Review</a>(SSCI) </td>
+            <td><a target="_blank" href="http://www.sciencedirect.com/science/journal/09695931">13.[sciencedirect]
+                International Business Review</a>(SSCI) </td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+          </tr>
+          <tr>
+            <td><br>
+            </td>
+            <td><a target="_blank" href="http://www.sciencedirect.com/science/article/pii/S0378720608000888">14.[sciencedirect] Information & Management</a>(SSCI)</td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+          </tr>
+          <tr>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+          </tr>
+          <tr>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
             <td><br>
             </td>
             <td><br>
