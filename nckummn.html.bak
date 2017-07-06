@@ -60,31 +60,32 @@ function ShowTime(){
 </script> </head>
   <body onload="ShowTime()">
     <!--@NCKU_MMN_Web ByHoyuan-->
-    <div id="showbox">@NCKU_MMN_Web ByHoyuan (2016/9/19 21:36:31)<br>
-      <br>
-      <a href="https://goo.gl/gtAqcX">::: Meeting報告時序表 :::</a></div>
+    <div id="showbox">@NCKU_MMN_Web ByHoyuan (2016/9/19 21:36:31)</div>
+    <br>
+    <a href="https://goo.gl/gtAqcX">::: Meeting報告時序表 :::</a>
+    <br>
     <p>106<br>
       ├ 08/12&nbsp; G報告 <a href="https://goo.gl/NTCL8I">論 文進度</a> <a href="https://goo.gl/xQoQb1">論
         文撰寫</a> <a href="https://goo.gl/20Xs82">報 告表格</a><br>
-      ├ 07/01 <a href="https://goo.gl/3DSPM8">G報告</a><br>
-      ├ 05/13 <a href="https://goo.gl/QBoHGA">G 報告</a><br>
-      ├ 02/25 <a href="https://goo.gl/uYvwhV">G 報告</a> (口述稿在下方附註)<br>
+      ├ <del>07/01 <a href="https://goo.gl/3DSPM8">G報告</a></del><br>
+      ├ <del>05/13 <a href="https://goo.gl/QBoHGA">G 報告</a></del><br>
+      ├ <del>02/25 <a href="https://goo.gl/uYvwhV">G 報告</a> (口述稿在下方附註)</del><br>
       <br>
     </p>
     <p>105<br>
-      ├ 12/03 <a href="https://drive.google.com/open?id=0BwqzBGEB86M7cy1rbk0tZkp6Z0E">原
-        始期刊</a> ; <a href="https://goo.gl/0VMTrQ">G 報告</a> (口述稿在下方附註)<br>
-      ├ 09/24 僅報告論文進度<br>
-      └ 04/09 <a href="https://drive.google.com/open?id=0BwqzBGEB86M7eGxHOW03S3VnaDQ">原
+      ├ <del>12/03 <a href="https://drive.google.com/open?id=0BwqzBGEB86M7cy1rbk0tZkp6Z0E">原
+        始期刊</a> ; <a href="https://goo.gl/0VMTrQ">G 報告</a> (口述稿在下方附註)</del><br>
+      ├ <del>09/24 僅報告論文進度</del><br>
+      └ <del>04/09 <a href="https://drive.google.com/open?id=0BwqzBGEB86M7eGxHOW03S3VnaDQ">原
         始期刊</a> ; <a href="https://goo.gl/Ij3xrj">G 報告</a> <a href="https://docs.google.com/presentation/d/1Y5wFehxAdeWOuzfev8ZChO9CL7g3J9_e8dG6i4pICuA/edit?usp=sharing">G
         口述稿</a> <a href="https://docs.google.com/presentation/d/1VHk82x3SZn_xqrz6wuEYIvUMQghQbL2LpeGAVNGmtH8/edit?usp=sharing">論
-        文進度_v1050409a</a><br>
+        文進度_v1050409a</a></del><br>
     </p>
     <p>104<br>
-      └ 12/05 ok <a href="https://drive.google.com/open?id=0BwqzBGEB86M7eS1TV1FNeF9xX0E">原
+      └ <del>12/05 <a href="https://drive.google.com/open?id=0BwqzBGEB86M7eS1TV1FNeF9xX0E">原
         始期刊</a> ; <a href="https://prezi.com/g_fvzyhousk4/1041205now/">P報告</a>
       <a href="https://docs.google.com/presentation/d/1WWGAb6VGLcDjHTg7ZPMgB4-5QBQUan9KtaHFcPQ2atE/edit">G
-        口述稿</a></p>
+        口述稿</a></del></p>
     <hr> <a name="G"></a><a href="http://www.google.com.tw/">Google</a>&nbsp;&nbsp;<a
       href="https://drive.google.com/drive/my-drive">G
       硬碟</a>&nbsp;&nbsp;<a href="http://translate.google.com/">G字典</a>&nbsp;&nbsp;<a
