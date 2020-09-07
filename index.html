@@ -48,13 +48,20 @@ document.onkeydown= handleKeyPress
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- 引入 jQuery -->
     <script type="text/javascript">
       // If your site is on Cloudflare, then you can use '/cdn-cgi/trace' instead
-      $.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
-	    ipstart = data.substr(data.indexOf("ip=")+3);
-		onlyip = ipstart.substr(0,ipstart.indexOf("ts=")-1);
-		if (onlyip.length > 16)
-		  $("#ipaddr").html(IPv6toIPv4(onlyip));
-		else
-          $("#ipaddr").html(onlyip);
+//      $.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
+//	    ipstart = data.substr(data.indexOf("ip=")+3);
+//		onlyip = ipstart.substr(0,ipstart.indexOf("ts=")-1);
+//		if (onlyip.length > 16)
+//		  $("#ipaddr").html(IPv6toIPv4(onlyip));
+//		else
+//          $("#ipaddr").html(onlyip);
+
+$.getJSON("https://api.ipify.org?format=json", 
+                                          function(data) { 
+  
+            // Setting text of element P with id gfg 
+		  
+$("#ipaddr").html(data.ip);		  
       })
 
     function IPv6toIPv4(value) {
