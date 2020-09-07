@@ -46,14 +46,30 @@ function handleKeyPress(evt)
 document.onkeydown= handleKeyPress
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- 引入 jQuery -->
-        <script type="text/javascript">
-// If your site is on Cloudflare, then you can use '/cdn-cgi/trace' instead
+    <script type="text/javascript">
+      // If your site is on Cloudflare, then you can use '/cdn-cgi/trace' instead
       $.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
 	    ipstart = data.substr(data.indexOf("ip=")+3);
 		onlyip = ipstart.substr(0,ipstart.indexOf("ts=")-1);
-        $("#ipaddr").html(onlyip);
+		if (onlyip.length > 16)
+		  $("#ipaddr").html(IPv6toIPv4(onlyip));
+		else
+          $("#ipaddr").html(onlyip);
       })
-	
+
+    function IPv6toIPv4(value) {
+		//var value = '2001:0:9d38:6abd:248d:2ee4:3f57:fd26'; 
+
+		var split_str = value.split(':'); 
+		value = split_str[6] + split_str[7]; 
+
+		var ip_1 = ~parseInt(value.substring(0,2),16) & 0xFF; 
+		var ip_2 =~parseInt(value.substring(2,4),16) & 0xFF; 
+		var ip_3 =~parseInt(value.substring(4,6),16) & 0xFF; 
+		var ip_4 =~parseInt(value.substring(6,8),16) & 0xFF; 
+
+		return ip_1+'.'+ip_2+'.'+ip_3+'.'+ip_4;
+	}
 </script>
 
 </head>
