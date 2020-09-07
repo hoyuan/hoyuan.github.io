@@ -44,7 +44,19 @@ function handleKeyPress(evt)
 	return true;
 }
 document.onkeydown= handleKeyPress
-</script></head>
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- 引入 jQuery -->
+        <script type="text/javascript">
+// If your site is on Cloudflare, then you can use '/cdn-cgi/trace' instead
+      $.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
+	    ipstart = data.substr(data.indexOf("ip=")+3);
+		onlyip = ipstart.substr(0,ipstart.indexOf("ts=")-1);
+        $("#ipaddr").html(onlyip);
+      })
+	
+</script>
+
+</head>
   <body>
     <table>
       <tbody>
@@ -75,7 +87,7 @@ EMB參考資料分流: <a href="http://lab.istyle.idv.tw/~hoyuan/b5emb/">主站<
       href="http://www.google.com/calendar">G
       日曆</a>  <br />
     <br />
-    <a href="http://www.whatismyip.com.tw/">查自己的外部IP</a><br />
+    <a href="http://www.whatismyip.com.tw/">查自己的外部IP</a> <font id="ipaddr"></font><br />
     <a href="http://tw.yahoo.com/">Yahoo!</a><br />
     <a href="http://zh.wikipedia.org/wiki/Wiki">Wiki</a><br />
     <a href="http://www.dcard.tw/">DCard</a><br />
