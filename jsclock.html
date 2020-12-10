@@ -13,13 +13,13 @@
 
     Tmm = checkTime(Tmm);
     Tss = checkTime(Tss);
-    document.getElementById('clockT').innerHTML = "<font color=#FFFFFF>" + Thh + ":" + Tmm + ":" + Tss + "</font>";
+    document.getElementById('clockT').innerHTML = "<font size=6 color=#FFFFFF>" + Thh + ":" + Tmm + ":" + Tss + "</font>";
 
 
 
     var diffTime=today;
-    diffTime.setSeconds(today.getSeconds()+32);  //與打卡鐘的時間差
-    console.log(diffTime.getSeconds());
+    diffTime.setSeconds(today.getSeconds()+32);  //手機與打卡鐘的時間差
+    //console.log(diffTime.getSeconds());
     
     var Dhh = diffTime.getHours();
     var Dmm = diffTime.getMinutes();
@@ -28,7 +28,7 @@
     
     Dmm = checkTime(Dmm);
     Dss = checkTime(Dss);
-    document.getElementById('clockD').innerHTML = "<font color=#FFFFFF><h1>" + Dhh + ":" + Dmm + ":" + Dss + "</h1></font>";
+    document.getElementById('clockD').innerHTML = "<font size=7 color=#FFFFFF>" + Dhh + ":" + Dmm + ":" + Dss + "</font>";
 
 
     var timeoutId = setTimeout(startTime, 500);
