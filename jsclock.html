@@ -2,46 +2,47 @@
   <head>
   <script>
     function startTime(){
-    //  var orgTime = new Date();
-    //  var diffTime.setSeconds(orgTime.getSeconds()-15);
-    //console.log(`realTime = ${diffTime.getHours()}:${diffTime.getMinutes()}`)
-    
-    var today = new Date();
-    var Thh = today.getHours();
-    var Tmm = today.getMinutes();
-    var Tss = today.getSeconds();
+      //  var orgTime = new Date();
+      //  var diffTime.setSeconds(orgTime.getSeconds()-15);
+      //console.log(`realTime = ${diffTime.getHours()}:${diffTime.getMinutes()}`)
+      
+      var today = new Date();
+      var Thh = today.getHours();
+      var Tmm = today.getMinutes();
+      var Tss = today.getSeconds();
 
-    Tmm = checkTime(Tmm);
-    Tss = checkTime(Tss);
-    document.getElementById('clockT').innerHTML = "<font size=5 color=#FFFFFF>" + Thh + ":" + Tmm + ":" + Tss + "</font>";
-
-
-
-    var diffTime=today;
-    diffTime.setSeconds(today.getSeconds()-32);  //手機與打卡鐘的時間差
-    //console.log(diffTime.getSeconds());
-    
-    var Dhh = diffTime.getHours();
-    var Dmm = diffTime.getMinutes();
-    var Dss = diffTime.getSeconds();
-    
-    
-    Dmm = checkTime(Dmm);
-    Dss = checkTime(Dss);
-    document.getElementById('clockD').innerHTML = "<font size=7 color=#FFFFFF>" + Dhh + ":" + Dmm + ":" + Dss + "</font>";
+      Tmm = checkTime(Tmm);
+      Tss = checkTime(Tss);
+      document.getElementById('clockT').innerHTML = "<font size=5 color=#FFFFFF>" + Thh + ":" + Tmm + ":" + Tss + "</font>";
 
 
-    var timeoutId = setTimeout(startTime, 50);
+
+      var diffTime=today;
+      diffTime.setSeconds(today.getSeconds()-32);  //手機與打卡鐘的時間差
+      //console.log(diffTime.getSeconds());
+      
+      var Dhh = diffTime.getHours();
+      var Dmm = diffTime.getMinutes();
+      var Dss = diffTime.getSeconds();
+      
+      
+      Dmm = checkTime(Dmm);
+      Dss = checkTime(Dss);
+      document.getElementById('clockD').innerHTML = "<font size=7 color=#FFFFFF>" + Dhh + ":" + Dmm + ":" + Dss + "</font>";
+
+
+      var timeoutId = setTimeout(startTime, 50);
     }
 
     function checkTime(i){
-    if(i < 10) {
-        i = "0" + i;
-    }
-    return i;
+      if(i < 10) {
+          i = "0" + i;
+      }
+      return i;
     }  
   </script>
   </head>  
+
   <body bgcolor=#000000 onload="startTime()">
     <font color=#FFFFFF>Phone:</font>
     <div id="clockT"></div>
@@ -49,4 +50,5 @@
     <font color=#FFFFFF>Company:</font>
     <div id="clockD"></div>
   </body>
+  
 </html>
