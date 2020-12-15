@@ -15,7 +15,7 @@ function doCookieSetup(name, value) { //設定 Set cookie
     var d = new Date();
     d.setTime(d.getTime() + (expire_days * 24 * 60 * 60 * 1000));
     var expires = "expires=" + d.toGMTString();
-    document.cookie = "name=test" + "; " + expires + '; domain=hoyuan.github.io; path=/';
+    document.cookie = name + "=" + escape(value) + "; " + expires + '; domain=hoyuan.github.io; path=/';
     // alert(document.cookie)
 
 
@@ -85,6 +85,8 @@ listCookies();
   </head>  
 
   <body>
+    test3<br>
+
 <form><!--設定 Cookie：-->
   Cookie Name: <input name="cName" type="text" /> 
   Cookie Value: <input name="cValue" type="text" />
