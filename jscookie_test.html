@@ -45,10 +45,16 @@ function getCookieValueByIndex(startIndex) {
 }
 
 function delCookie(name) { //刪除 Delete cookie entry
-  var exp = new Date();
-  exp.setTime(exp.getTime() - 1);
-  var cval = getCookie(name);
-  document.cookie = escape(name) + "=" + cval + "; " + expires + '; domain=hoyuan.github.io; path=/'; //"; expires=" + exp.toGMTString();
+  //var exp = new Date();
+  //exp.setTime(exp.getTime() - 1);
+  //var cval = getCookie(name);
+  //document.cookie = escape(name) + "=" + cval + "; " + expires + '; domain=hoyuan.github.io; path=/'; //"; expires=" + exp.toGMTString();
+  
+  var d = new Date();
+  d.setTime(d.getTime() -1);
+  var expires = "expires=" + d.toGMTString();
+  document.cookie = name + "=; expires=" + expires + '; domain=hoyuan.github.io; path=/';
+  // alert(document.cookie)  
 }
 
 
@@ -85,7 +91,7 @@ function listCookies() {
   </head>  
 
   <body>
-    test7<br>
+    test8<br>
 
 <form><!--設定 Cookie：-->
   Cookie Name: <input name="cName" type="text" /> 
