@@ -1,6 +1,6 @@
 <html>
   <head>
-    <script src="./jquery-1.12.3.min.js?ver=1.12.3"></script>
+    <!--<script src="./jquery-1.12.3.min.js?ver=1.12.3"></script>-->
 
     <script>
 
@@ -11,7 +11,7 @@ function doCookieSetup(name, value) { //設定 Set cookie
 //  document.cookie = name + "=" + escape(value) + ";expires=" + expires.toGMTString()
 
 
-    expire_days = 1; // 過期日期(天)
+    expire_days = 365; // 過期日期(天)
     var d = new Date();
     d.setTime(d.getTime() + (expire_days * 24 * 60 * 60 * 1000));
     var expires = "expires=" + d.toGMTString();
@@ -20,7 +20,7 @@ function doCookieSetup(name, value) { //設定 Set cookie
 
 
 
-  alert("setCook:");
+//  alert("setCook:");
 }
 
 function getCookie(name) { //查詢 Get cookie by name
@@ -30,7 +30,7 @@ function getCookie(name) { //查詢 Get cookie by name
   var i = 0;
   while (i < cookieLen) { //& lt;
     var j = i + nameLen;
-    alert("getCook:"+cookieLen+" : "+getCookieValueByIndex(j));
+    //alert("getCook:"+cookieLen+" : "+getCookieValueByIndex(j));
     if (document.cookie.substring(i, j) == arg) return getCookieValueByIndex(j);
     i = document.cookie.indexOf(" ", i) + 1;
     if (i == 0) break;
@@ -85,7 +85,7 @@ listCookies();
   </head>  
 
   <body>
-    test3<br>
+    test5<br>
 
 <form><!--設定 Cookie：-->
   Cookie Name: <input name="cName" type="text" /> 
