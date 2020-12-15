@@ -35,7 +35,7 @@
 
       //打卡鐘時間
       var diffTime= new Date();
-      diffTime.setSeconds(today.getSeconds()-32);  //手機與打卡鐘的時間差
+      diffTime.setSeconds(today.getSeconds()+3);  //手機與打卡鐘的時間差
       //console.log(diffTime.getSeconds());
       
       var Dhh = diffTime.getHours();
