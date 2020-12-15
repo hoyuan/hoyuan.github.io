@@ -1,0 +1,116 @@
+<html>
+  <head>
+    <script src="./jquery-1.12.3.min.js?ver=1.12.3"></script>
+
+    <script>
+
+function doCookieSetup(name, value) { //設定 Set cookie
+//  var expires = new Date();
+//  //有效時間保存 2 天 2*24*60*60*1000
+//  expires.setTime(expires.getTime() + 172800000);
+//  document.cookie = name + "=" + escape(value) + ";expires=" + expires.toGMTString()
+
+
+    expire_days = 1; // 過期日期(天)
+    var d = new Date();
+    d.setTime(d.getTime() + (expire_days * 24 * 60 * 60 * 1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = "name=test" + "; " + expires + '; domain=hoyuan.github.io; path=/';
+    // alert(document.cookie)
+
+
+
+  alert("setCook:");
+}
+
+function getCookie(name) { //查詢 Get cookie by name
+  var arg = escape(name) + "=";
+  var nameLen = arg.length;
+  var cookieLen = document.cookie.length;
+  var i = 0;
+  while (i < cookieLen) { //& lt;
+    var j = i + nameLen;
+    if (document.cookie.substring(i, j) == arg) return getCookieValueByIndex(j);
+    i = document.cookie.indexOf(" ", i) + 1;
+    if (i == 0) break;
+  }
+  alert("getCook:"+cookieLen);
+  return null;
+}
+
+function getCookieValueByIndex(startIndex) {
+  var endIndex = document.cookie.indexOf(";", startIndex);
+  if (endIndex == -1) endIndex = document.cookie.length;
+  return unescape(document.cookie.substring(startIndex, endIndex));
+}
+
+function delCookie(name) { //刪除 Delete cookie entry
+  var exp = new Date();
+  exp.setTime(exp.getTime() - 1);
+  var cval = getCookie(name);
+  document.cookie = escape(name) + "=" + cval + "; expires=" + exp.toGMTString();
+}
+
+
+function listCookie() { //列出全部 Cookie 值
+  document.writeln("<table>");
+  document.writeln("<tr><th>Name<th>Value");
+  cookieArray = document.cookie.split(";");
+  for (var i = 0; i < cookieArray.length; i++) {
+    thisCookie = cookieArray[i].split("=");
+    cName = unescape(thisCookie[0]);
+    cValue = unescape(thisCookie[1]);
+    document.writeln("<tr><td>" + cName + "</td><td>" + cValue + "</td>");
+  }
+  document.writeln("</table>");
+}
+
+
+
+
+
+
+
+function listCookies() {
+    var theCookies = document.cookie.split(';');
+    var aString = '';
+    for (var i = 1 ; i <= theCookies.length; i++) {
+        aString += i + ' ' + theCookies[i-1] + "\n";
+    }
+    return aString;
+}
+
+listCookies();
+    </script>
+  </head>  
+
+  <body>
+<form><!--設定 Cookie：-->
+  Cookie Name: <input name="cName" type="text" /> 
+  Cookie Value: <input name="cValue" type="text" />
+  <input onclick="doCookieSetup(this.form.cName.value, this.form.cValue.value)"
+  type="button" value="設定" />
+</form>
+
+<br>
+
+<form><!--查詢 Cookie-->
+  Cookie Name: <input name="cName" type="text" /> 
+  Cookie Value: <input name="cValue" type="text" />
+  <input onclick="this.form.cValue.value=getCookie(this.form.cName.value)"
+  type="button" value="查詢" />
+</form>
+
+
+<form><!--刪除 Cookie-->
+  Cookie Name: <input name="cName" type="text" />
+  <input onclick="delCookie(this.form.cName.value)" type="button" value="移除" />
+</form>
+
+<script>
+listCookie(); //列出全部 Cookie 值
+</script>
+
+  </body>
+  
+</html>
