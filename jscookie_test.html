@@ -91,7 +91,15 @@ function listCookies() {
   </head>  
 
   <body>
-    test8<br>
+    test9<br>
+
+<form><!--設定固定 Cookie：-->
+  Cookie Value: <input name="cValue" type="text" />
+  <input onclick="doCookieSetup('setdiffV', this.form.cValue.value)"
+  type="button" value="設定setdiff" />
+</form>
+
+<br>
 
 <form><!--設定 Cookie：-->
   Cookie Name: <input name="cName" type="text" /> 
