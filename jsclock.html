@@ -35,7 +35,7 @@
 
       //打卡鐘時間
       var diffTime= new Date();
-      var setdiff=+3;
+      var setdiff=getCookie('setdiffV');//+3;
       diffTime.setSeconds(today.getSeconds()+setdiff);  //手機與打卡鐘的時間差
       //console.log(diffTime.getSeconds());
       
@@ -115,7 +115,36 @@
           i = "0" + i;
       }
       return i;
-    }  
+    }
+
+function doCookieSetup(name, value) { //設定 Set cookie
+    expire_days = 365; // 過期日期(天)
+    var d = new Date();
+    d.setTime(d.getTime() + (expire_days * 24 * 60 * 60 * 1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = name + "=" + escape(value) + "; " + expires + '; domain=hoyuan.github.io; path=/';
+}
+
+function getCookie(name) { //查詢 Get cookie by name
+  var arg = escape(name) + "=";
+  var nameLen = arg.length;
+  var cookieLen = document.cookie.length;
+  var i = 0;
+  while (i < cookieLen) { //& lt;
+    var j = i + nameLen;
+    if (document.cookie.substring(i, j) == arg) return getCookieValueByIndex(j);
+    i = document.cookie.indexOf(" ", i) + 1;
+    if (i == 0) break;
+  }
+  return null;
+}
+
+function getCookieValueByIndex(startIndex) {
+  var endIndex = document.cookie.indexOf(";", startIndex);
+  if (endIndex == -1) endIndex = document.cookie.length;
+  return unescape(document.cookie.substring(startIndex, endIndex));
+}
+
   </script>
   </head>  
 
@@ -127,6 +156,18 @@
     <div id="clockD"></div>
     <div id="clockM"></div>
     <div id="clockE"></div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+<form><!--設定固定 Cookie：-->
+  setdiff: <input name="cValue" type="text" size="3"/>
+  <input onclick="doCookieSetup('setdiffV', this.form.cValue.value)"
+  type="button" value="set" />
+</form>    
+
   </body>
   
 </html>
