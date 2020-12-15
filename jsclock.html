@@ -35,7 +35,7 @@
 
       //打卡鐘時間
       var diffTime= new Date();
-      var setdiff=getCookie('setdiffV');//+3;
+      var setdiff=parseInt(getCookie('setdiffV'));//+3;
       diffTime.setSeconds(today.getSeconds()+setdiff);  //手機與打卡鐘的時間差
       //console.log(diffTime.getSeconds());
       
