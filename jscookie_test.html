@@ -77,26 +77,25 @@ function listCookie() { //列出全部 Cookie 值
 
 
 
-function listCookies() {
-    var theCookies = document.cookie.split(';');
-    var aString = '';
-    for (var i = 1 ; i <= theCookies.length; i++) {
-        aString += i + ' ' + theCookies[i-1] + "\n";
-    }
-    return aString;
-}
 
-//listCookies();
     </script>
   </head>  
 
   <body>
-    test9<br>
+    test10<br>
 
 <form><!--設定固定 Cookie：-->
-  Cookie Value: <input name="cValue" type="text" />
+  setdiff: <input name="cValue" type="text" />
   <input onclick="doCookieSetup('setdiffV', this.form.cValue.value)"
-  type="button" value="設定setdiff" />
+  type="button" value="set" />
+</form>
+
+<br>
+
+<form><!--查詢固定 Cookie-->
+  getdiff: <input name="cValue" type="text" />
+  <input onclick="this.form.cValue.value=getCookie('setdiffV')"
+  type="button" value="get" />
 </form>
 
 <br>
