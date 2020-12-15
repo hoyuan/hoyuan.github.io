@@ -30,11 +30,11 @@ function getCookie(name) { //查詢 Get cookie by name
   var i = 0;
   while (i < cookieLen) { //& lt;
     var j = i + nameLen;
+    alert("getCook:"+cookieLen+" : "+getCookieValueByIndex(j));
     if (document.cookie.substring(i, j) == arg) return getCookieValueByIndex(j);
     i = document.cookie.indexOf(" ", i) + 1;
     if (i == 0) break;
   }
-  alert("getCook:"+cookieLen);
   return null;
 }
 
