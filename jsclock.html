@@ -35,7 +35,8 @@
 
       //打卡鐘時間
       var diffTime= new Date();
-      diffTime.setSeconds(today.getSeconds()+3);  //手機與打卡鐘的時間差
+      var setdiff=+3;
+      diffTime.setSeconds(today.getSeconds()+setdiff);  //手機與打卡鐘的時間差
       //console.log(diffTime.getSeconds());
       
       var Dhh = diffTime.getHours();
@@ -46,6 +47,13 @@
       Dmm = checkTime(Dmm);
       Dss = checkTime(Dss);
       document.getElementById('clockD').innerHTML = "<font size=7 color=#FFFFFF>" + Dhh + ":" + Dmm + ":" + Dss + "</font>";
+      
+      var STRsetdiff="";
+      if (setdiff >= 0)
+        STRsetdiff = "+" + setdiff;
+      else
+        STRsetdiff = setdiff;
+      document.getElementById('setdiff').innerHTML = "<font size=4 color=#FFFFFF>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + STRsetdiff + "</font>";
 
 
       //距離午休打卡時間差
@@ -113,7 +121,7 @@
 
   <body bgcolor=#000000 onload="startTime()">
     <font color=#FFFFFF>Phone:</font>
-    <div id="clockT"></div>
+    <div id="clockT"></div><div id="setdiff"></div>
     <br>
     <font color=#FFFFFF>Company:</font>
     <div id="clockD"></div>
