@@ -45,7 +45,7 @@ function handleKeyPress(evt)
 }
 document.onkeydown= handleKeyPress
 </script></head>
-  <body onload="startTime()">個人氣象路況觀測站<br />
+  <body onload="startTime()">全台路口車流及天氣Camera (每約10秒更新或重讀一次)<br />
     <div><br />
 
 <table>
@@ -70,10 +70,19 @@ function ChangeMedia(){
 	var d = new Date();
 	var t = d.getTime();
 	document.getElementById('camara').src = "https://cctv4.kctmc.nat.gov.tw/75f7e057/snapshot?t=1653614614142?"+t;
-	//document.getElementById('camaraB').src = "https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=132&0.029942063653013884&t1968=0.802920496282052?"+t;
   document.getElementById("camaraB").src="https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=132&0.029942063653013884&t1968=0.802920496282052&ns="+t;
+
+  document.getElementById('camaraTC1').src = "https://tcnvr2.taichung.gov.tw:7001/media/00-0f-7c-13-da-ac.mpjpeg?resolution=240p&auth=cHVibGljdmlld2VyOjVlMDA1Nzk1ZjA1NTA6YjA4MzE0ZmYxNjU2YWY3YjY4OGNkZWZmNGQzYmIyYjM&ns"+t;
 }
 var reloadcam = setInterval("ChangeMedia()",9700);
+
+
+function ChangeMedia2(){
+	var d = new Date();
+	var t = d.getTime();
+  document.getElementById('camaraTC2').src = "http://210.241.63.120/abs2mjpg/bmjpg?camera=209&1505465831984&ns"+t;
+}
+var reloadcam2 = setInterval("ChangeMedia2()",8000);
 
 
 function Breload(){
@@ -84,70 +93,68 @@ function Breload(){
 
 <tr>
   <td>
-    <a href="cwb_cam.html">切換至: 全台路口車流及天氣Camera</a><!--現在時間: <div id="clockT"></div>    -->
+  </td>
+  <td>
+    <a href="cwb.html">切換至: 個人氣象路況觀測站</a>&nbsp;
   </td>
   <td>
   </td>
+
+  <tr>
+  <td>
+  </td>
+  <td>
+  </td>
+  <td>
+  </td>
+
+
 <tr>
 <td>
-<img src="https://cctv4.kctmc.nat.gov.tw/75f7e057/snapshot?t=1653614614142" alt="Loading..." name="camara" width="450" height="335" border="0" id="camara" />
-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<a href="https://cctv4.kctmc.nat.gov.tw/75f7e057/snapshot?t=1653614614142">三商街與五甲交流道口)</a> 每約10秒更新一次                  
+  台中
+</td>
+<td align="center">
+<img src="https://tcnvr2.taichung.gov.tw:7001/media/00-0f-7c-13-da-ac.mpjpeg?resolution=240p&auth=cHVibGljdmlld2VyOjVlMDA1Nzk1ZjA1NTA6YjA4MzE0ZmYxNjU2YWY3YjY4OGNkZWZmNGQzYmIyYjM" alt="Loading..." name="camaraTC1" width="450" height="335" border="0" id="camaraTC1" />
+<br>(<a href="https://tcnvr2.taichung.gov.tw:7001/media/00-0f-7c-13-da-ac.mpjpeg?resolution=240p&auth=cHVibGljdmlld2VyOjVlMDA1Nzk1ZjA1NTA6YjA4MzE0ZmYxNjU2YWY3YjY4OGNkZWZmNGQzYmIyYjM">09140五權西路/忠勇路(右側車流往南屯交流道)</a>)
 
 </td>
 
 
+<td align="center">
+<img src="http://210.241.63.120/abs2mjpg/bmjpg?camera=209&1505465831984" alt="Loading..." name="camaraTC2" width="450" height="335" border="0" id="camaraTC2" onclick="Breload()"/>
+<br>(<a href="http://210.241.63.120/abs2mjpg/bmjpg?camera=209&1505465831984">國1大雅 174K+000</a>)
+
+</td>
+
+
+<tr>
+<td>&nbsp;
+</td>
 <td>
+</td>
+<td>
+</td>
+
+
+
+<tr>
+<td>
+  高雄
+</td>
+<td align="center">
+<img src="https://cctv4.kctmc.nat.gov.tw/75f7e057/snapshot?t=1653614614142" alt="Loading..." name="camara" width="450" height="335" border="0" id="camara" />
+<br>(<a href="https://cctv4.kctmc.nat.gov.tw/75f7e057/snapshot?t=1653614614142">三商街與五甲交流道口</a>)
+
+</td>
+
+
+<td align="center">
 <img src="https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=132&0.029942063653013884&t1968=0.802920496282052" alt="Loading..." name="camaraB" width="450" height="335" border="0" id="camaraB" onclick="Breload()"/>
-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<a href="https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=132&0.029942063653013884&t1968=0.802920496282052">國1五甲370k+615)</a> 每約10秒重讀一次
+<br>(<a href="https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=132&0.029942063653013884&t1968=0.802920496282052">國1五甲 370k+615</a>)
 
 </td>
 </table>
-<br>
-      <table width="100%" border="1">
-        <tbody>
-          <tr>
-            <td>天氣：<br />
-              <br />
-              <div>中央氣象局 <a target="_blank" href="https://www.cwb.gov.tw/V8/C/">http://www.cwb.gov.tw/</a><br /><br />
-                一週預報：
-                <a href="https://www.cwb.gov.tw/V8/C/W/Town/index.html">全台</a>、
-                <a href="https://www.cwb.gov.tw/V8/C/W/Town/Town.html?TID=6703600">台南</a>、
-                <a href="https://www.cwb.gov.tw/V8/C/W/Town/Town.html?TID=6400800">高雄</a>、
-                <a href="https://www.cwb.gov.tw/V8/C/W/Town/Town.html?TID=1001301">屏東</a>；
-                <a href="https://www.cwb.gov.tw/V8/C/W/Town/Town.html?TID=6600400">台中</a>、
-                <a href="https://www.cwb.gov.tw/V8/C/W/Town/Town.html?TID=1000701">彰化</a>、
-                <a href="https://www.cwb.gov.tw/V8/C/W/Town/Town.html?TID=1000801">南投</a>、
-                <a href="https://www.cwb.gov.tw/V8/C/W/Town/Town.html?TID=1000901">雲林</a>、
-                <a href="https://www.cwb.gov.tw/V8/C/W/Town/Town.html?TID=1001001">嘉義</a><br /><br />
-                一週預報：
-                <a href="https://www.cwb.gov.tw/V8/C/W/Town/Town.html?TID=1001701">基隆</a>、
-                <a href="https://www.cwb.gov.tw/V8/C/W/Town/Town.html?TID=6300200">台北</a>、
-                <a href="https://www.cwb.gov.tw/V8/C/W/Town/Town.html?TID=6500100">新北</a>、
-                <a href="https://www.cwb.gov.tw/V8/C/W/Town/Town.html?TID=6800100">桃園</a>、
-                <a href="https://www.cwb.gov.tw/V8/C/W/Town/Town.html?TID=1000401">新竹</a>、
-                <a href="https://www.cwb.gov.tw/V8/C/W/Town/Town.html?TID=1000501">苗栗</a>、
-                <a href="https://www.cwb.gov.tw/V8/C/W/Town/Town.html?TID=1000201">宜蘭</a>、
-                <a href="https://www.cwb.gov.tw/V8/C/W/Town/Town.html?TID=1001501">花蓮</a>、
-                <a href="https://www.cwb.gov.tw/V8/C/W/Town/Town.html?TID=1001401">台東</a><br /><br />
 
-                <a href="https://www.cwb.gov.tw/V8/C/P/Rainfall/Rainfall_QZJ.html">雨量</a> 
-                  <a target="_blank" href="https://www.cwb.gov.tw/V8/C/P/Typhoon/TY_WARN.html">颱風消息</a> 
-                  <a target="_blank" href="https://www.cwb.gov.tw/V8/C/E/index.html">地震報告</a> 
-                  <a target="_top" href="https://www.cwb.gov.tw/V8/C/W/OBS_Radar.html">雷達回波</a><br />
-                <br />
-                登山氣象: <a href="https://www.cwb.gov.tw/V8/C/L/Mountain/Mountain.html?QS=&PID=D080" target="_top">玉山</a> 
-                  <a href="https://www.cwb.gov.tw/V8/C/L/Mountain/Mountain.html?QS=&PID=D028" target="_top">合歡山</a>
-                  <a href="https://www.cwb.gov.tw/V8/C/L/Mountain/Mountain.html?QS=&PID=D047" target="_top">大武山</a>
-                <br />
-                國家森林遊樂區:&nbsp;
-                <a href="https://www.cwb.gov.tw/V8/C/W/Town/Town.html?TID=1001018">阿里山</a>&nbsp;
-                <a href="https://www.cwb.gov.tw/V8/C/W/Town/Town.html?TID=1000813">合歡山</a> <br />
-                <br />
-</div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
       <div>
         <div>
           <div><br />
