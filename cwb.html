@@ -47,6 +47,34 @@ document.onkeydown= handleKeyPress
 </script></head>
   <body>個人氣象路況觀測站<br />
     <div><br />
+
+<table>
+<tr>
+<td>
+<script language="javascript" type="text/javascript" >
+<!--
+function ChangeMedia(){
+	var d = new Date();
+	var t = d.getTime();
+	document.getElementById('camara').src = "https://cctv4.kctmc.nat.gov.tw/75f7e057/snapshot?t=1653614614142?"+t;
+}
+var reloadcam = setInterval("ChangeMedia()",12000);
+-->
+</script>
+
+<img src="https://cctv4.kctmc.nat.gov.tw/75f7e057/snapshot?t=1653614614142" alt="Loading..." name="camara" width="450" height="335" border="0" id="camara" />
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<a href="https://cctv4.kctmc.nat.gov.tw/75f7e057/snapshot?t=1653614614142">三商街與五甲交流道口)</a>                  
+
+</td>
+
+
+<td>
+<img src="https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=132&0.029942063653013884&t1968=0.802920496282052" alt="Loading..." name="camaraB" width="450" height="335" border="0" id="camaraB" />
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<a href="https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=132&0.029942063653013884&t1968=0.802920496282052">國1五甲370k+615)</a>                  
+
+</td>
+</table>
+
       <table width="100%" border="1">
         <tbody>
           <tr>
@@ -220,35 +248,6 @@ document.onkeydown= handleKeyPress
                     <a href="https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=334&0.4754748743527961">國1鼎金(南下)</a>  
                     <a href="https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=128&0.49033791310693986">※國1鼎金(北上)</a>  
                     <br />
-                    <br />
-<table>
-<tr>
-<td>
-<script language="javascript" type="text/javascript" >
-<!--
-function ChangeMedia(){
-	var d = new Date();
-	var t = d.getTime();
-	document.getElementById('camara').src = "https://cctv4.kctmc.nat.gov.tw/75f7e057/snapshot?t=1653614614142?"+t;
-}
-var reloadcam = setInterval("ChangeMedia()",12000);
--->
-</script>
-
-<img src="https://cctv4.kctmc.nat.gov.tw/75f7e057/snapshot?t=1653614614142" alt="Loading..." name="camara" width="450" height="335" border="0" id="camara" />
-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<a href="https://cctv4.kctmc.nat.gov.tw/75f7e057/snapshot?t=1653614614142">三商街與五甲交流道口)</a>                  
-
-</td>
-
-
-<td>
-<img src="https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=132&0.029942063653013884&t1968=0.802920496282052" alt="Loading..." name="camaraB" width="450" height="335" border="0" id="camaraB" />
-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<a href="https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=132&0.029942063653013884&t1968=0.802920496282052">國1五甲370k+615)</a>                  
-
-</td>
-</table>
-                  <br />
-                  <br />
                   屏東：<a href="http://59.125.198.2/T26-0K+100">楓港國小</a>  <br />
                   <br />
                   宜蘭：<a href="http://210.69.23.204:8081/mjpeg/X01001604800201">國
