@@ -221,6 +221,21 @@ document.onkeydown= handleKeyPress
                     <a href="https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=334&0.4754748743527961">國1鼎金(南下)</a>  
                     <a href="https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=128&0.49033791310693986">※國1鼎金(北上)</a>  
                     <br />
+
+<script language="javascript" type="text/javascript" >
+<!--
+function ChangeMedia(){
+	var d = new Date();
+	var t = d.getTime();
+	document.getElementById('camara').src = "https://cctv4.kctmc.nat.gov.tw/75f7e057/snapshot?t=1653614614142?"+t;
+}
+var reloadcam = setInterval("ChangeMedia()",1000);
+-->
+</script>
+
+<img src="https://cctv4.kctmc.nat.gov.tw/75f7e057/snapshot?t=1653614614142" alt="Loading..." name="camara" width="450" height="335" border="0" id="camara" />
+                  
+                  <br />
                   <br />
                   屏東：<a href="http://59.125.198.2/T26-0K+100">楓港國小</a>  <br />
                   <br />
