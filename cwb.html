@@ -71,8 +71,9 @@ function ChangeMedia(){
 	var t = d.getTime();
 	document.getElementById('camara').src = "https://cctv4.kctmc.nat.gov.tw/75f7e057/snapshot?t=1653614614142?"+t;
 	//document.getElementById('camaraB').src = "https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=132&0.029942063653013884&t1968=0.802920496282052?"+t;
+  document.getElementById("camaraB").src="https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=132&0.029942063653013884&t1968=0.802920496282052&ns="+t;
 }
-var reloadcam = setInterval("ChangeMedia()",97000);
+var reloadcam = setInterval("ChangeMedia()",9700);
 
 
 function Breload(){
