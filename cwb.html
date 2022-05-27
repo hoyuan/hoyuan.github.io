@@ -62,6 +62,8 @@ document.onkeydown= handleKeyPress
       Tmm = checkTime(Tmm);
       Tss = checkTime(Tss);
       document.getElementById('clockT').innerHTML = "<font size=5 color=#FFFFFF>" + Thh + ":" + Tmm + ":" + Tss + "</font>";
+
+      var timeoutId = setTimeout(startTime, 50);
   }
       
 function ChangeMedia(){
