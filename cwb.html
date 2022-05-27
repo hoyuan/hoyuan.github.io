@@ -71,8 +71,9 @@ function ChangeMedia(){
 	var t = d.getTime();
 	document.getElementById('camara').src = "https://cctv4.kctmc.nat.gov.tw/75f7e057/snapshot?t=1653614614142?"+t;
 	//document.getElementById('camaraB').src = "https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=132&0.029942063653013884&t1968=0.802920496282052?"+t;
+  document.getElementById("camaraB").src="https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=132&0.029942063653013884&t1968=0.802920496282052";
 }
-var reloadcam = setInterval("ChangeMedia()",10000);
+var reloadcam = setInterval("ChangeMedia()",97000);
 
 
 function Breload(){
@@ -90,14 +91,14 @@ function Breload(){
 <tr>
 <td>
 <img src="https://cctv4.kctmc.nat.gov.tw/75f7e057/snapshot?t=1653614614142" alt="Loading..." name="camara" width="450" height="335" border="0" id="camara" />
-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<a href="https://cctv4.kctmc.nat.gov.tw/75f7e057/snapshot?t=1653614614142">三商街與五甲交流道口)</a> 每10秒更新一次                  
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<a href="https://cctv4.kctmc.nat.gov.tw/75f7e057/snapshot?t=1653614614142">三商街與五甲交流道口)</a> 每約10秒更新一次                  
 
 </td>
 
 
 <td>
 <img src="https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=132&0.029942063653013884&t1968=0.802920496282052" alt="Loading..." name="camaraB" width="450" height="335" border="0" id="camaraB" onclick="Breload()"/>
-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<a href="https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=132&0.029942063653013884&t1968=0.802920496282052">國1五甲370k+615)</a> 點擊圖片重載
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<a href="https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=132&0.029942063653013884&t1968=0.802920496282052">國1五甲370k+615)</a> 每約10秒更新一次
 
 </td>
 </table>
