@@ -45,14 +45,15 @@ function handleKeyPress(evt)
 }
 document.onkeydown= handleKeyPress
 </script></head>
-  <body>個人氣象路況觀測站<br />
+  <body onload="startTime()">個人氣象路況觀測站<br />
     <div><br />
 
 <table>
   <script language="javascript" type="text/javascript" >
 <!--
 
-  //手機時間
+  function startTime(){
+      //手機時間
       var today = new Date();
       var Thh = today.getHours();
       var Tmm = today.getMinutes();
@@ -61,7 +62,7 @@ document.onkeydown= handleKeyPress
       Tmm = checkTime(Tmm);
       Tss = checkTime(Tss);
       document.getElementById('clockT').innerHTML = "<font size=5 color=#FFFFFF>" + Thh + ":" + Tmm + ":" + Tss + "</font>";
-
+  }
       
 function ChangeMedia(){
 	var d = new Date();
