@@ -49,10 +49,20 @@ document.onkeydown= handleKeyPress
     <div><br />
 
 <table>
-<tr>
-<td>
-<script language="javascript" type="text/javascript" >
+  <script language="javascript" type="text/javascript" >
 <!--
+
+  //手機時間
+      var today = new Date();
+      var Thh = today.getHours();
+      var Tmm = today.getMinutes();
+      var Tss = today.getSeconds();
+
+      Tmm = checkTime(Tmm);
+      Tss = checkTime(Tss);
+      document.getElementById('clockT').innerHTML = "<font size=5 color=#FFFFFF>" + Thh + ":" + Tmm + ":" + Tss + "</font>";
+
+      
 function ChangeMedia(){
 	var d = new Date();
 	var t = d.getTime();
@@ -68,6 +78,14 @@ function Breload(){
 -->
 </script>
 
+<tr>
+  <td>
+    <div id="clockT"></div>    
+  </td>
+  <td>
+  </td>
+<tr>
+<td>
 <img src="https://cctv4.kctmc.nat.gov.tw/75f7e057/snapshot?t=1653614614142" alt="Loading..." name="camara" width="450" height="335" border="0" id="camara" />
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<a href="https://cctv4.kctmc.nat.gov.tw/75f7e057/snapshot?t=1653614614142">三商街與五甲交流道口)</a> 每10秒更新一次                  
 
