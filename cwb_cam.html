@@ -80,16 +80,14 @@ var reloadcam = setInterval("ChangeMedia()",9700);
 function ChangeMedia2(){
 	var d = new Date();
 	var t = d.getTime();
+
+  document.getElementById('camaraTC2').src = "http://210.241.63.120/abs2mjpg/bmjpg?camera=209&ns="+t;
 }
 var reloadcam2 = setInterval("ChangeMedia2()",8000);
 
 
 function Breload(){
    document.getElementById("camaraB").src="https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=132&0.029942063653013884&t1968=0.802920496282052";
-}
-
-function BreloadTC2(){
-  document.getElementById('camaraTC2').src = "http://210.241.63.120/abs2mjpg/bmjpg?camera=209&1505465831984";
 }
 
 -->
@@ -125,8 +123,8 @@ function BreloadTC2(){
 
 
 <td align="center">
-<img src="http://210.241.63.120/abs2mjpg/bmjpg?camera=209&1505465831984" alt="Loading..." name="camaraTC2" width="450" height="335" border="0" id="camaraTC2" onclick="BreloadTC2()"/>
-<br>(<a href="http://210.241.63.120/abs2mjpg/bmjpg?camera=209&1505465831984">國1大雅 174K+000 C</a>)
+<img src="http://210.241.63.120/abs2mjpg/bmjpg?camera=209" alt="Loading..." name="camaraTC2" width="450" height="335" border="0" id="camaraTC2"/>
+<br>(<a href="http://210.241.63.120/abs2mjpg/bmjpg?camera=209">國1大雅 174K+000 D</a>)
 
 </td>
 
