@@ -51,6 +51,7 @@ document.onkeydown= handleKeyPress
 <table>
   <script language="javascript" type="text/javascript" >
 <!--
+  
 
   function startTime(){
       //手機時間
@@ -65,27 +66,49 @@ document.onkeydown= handleKeyPress
 
       var timeoutId = setTimeout(startTime, 50);
   }
-      
+
+  
+
+  
+function KH1reload(){
+   document.getElementById("camaraKH1").src="https://cctv4.kctmc.nat.gov.tw/75f7e057/snapshot?t=1653614614142";
+}
+function KH2reload(){
+   document.getElementById("camaraKH2").src="https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=132";
+}
+function KH3reload(){
+   document.getElementById("camaraKH3").src="https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=90";
+}
 function ChangeMedia(){
 	var d = new Date();
 	var t = d.getTime();
 	document.getElementById('camaraKH1').src = "https://cctv4.kctmc.nat.gov.tw/75f7e057/snapshot?t=1653614614142?"+t;
   document.getElementById('camaraKH2').src = "https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=132&ns="+t;
   document.getElementById('camaraKH3').src = "https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=90&ns="+t;
-
-
-
-
-  
-
-
-
-
-
-  
 }
 var reloadcam = setInterval("ChangeMedia()",7800);
 
+
+
+
+
+
+
+
+
+
+
+
+
+function KH4reload(){
+   document.getElementById("camaraKH4").src="https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=456";
+}
+function TN1reload(){
+   document.getElementById("camaraTN1").src="https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=67";
+}
+function TN2reload(){
+   document.getElementById("camaraTN2").src="https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=51";
+}
 function ChangeMediaB(){
 	var d = new Date();
 	var t = d.getTime();
@@ -100,6 +123,24 @@ function ChangeMediaB(){
 var reloadcamB = setInterval("ChangeMediaB()",8000);
 
 
+
+
+
+
+
+
+
+
+
+function KL2reload(){
+   document.getElementById("camaraKL2").src="https://cctvn.freeway.gov.tw/abs2mjpg/bmjpg?camera=10000";
+}
+function TP2reload(){
+   document.getElementById("camara2").src="https://cctvn.freeway.gov.tw/abs2mjpg/bmjpg?camera=13510";
+}
+function TTTT2reload(){
+   document.getElementById("camara2").src="";
+}
 function ChangeMediaC(){
 	var d = new Date();
 	var t = d.getTime();
@@ -112,6 +153,23 @@ function ChangeMediaC(){
 var reloadcamC = setInterval("ChangeMediaC()",8200);
 
 
+
+
+
+
+
+
+
+
+
+
+
+function TY2reload(){
+   document.getElementById("camaraTY2").src="https://cctvn.freeway.gov.tw/abs2mjpg/bmjpg?camera=16100";
+}
+function ST2reload(){
+   document.getElementById("camaraST2").src="https://cctvn.freeway.gov.tw/abs2mjpg/bmjpg?camera=19490";
+}
 function ChangeMediaD(){
 	var d = new Date();
 	var t = d.getTime();
@@ -124,6 +182,21 @@ function ChangeMediaD(){
 }
 var reloadcamD = setInterval("ChangeMediaD()",8400);
 
+
+
+
+
+
+
+function ML2reload(){
+   document.getElementById("camaraML2").src="https://cctvc.freeway.gov.tw/abs2mjpg/bmjpg?camera=571";
+}
+function TC1reload(){
+   document.getElementById("camaraTC1").src="https://tcnvr2.taichung.gov.tw:7001/media/00-0f-7c-13-da-ac.mpjpeg?resolution=240p&auth=cHVibGljdmlld2VyOjVlMDA1Nzk1ZjA1NTA6YjA4MzE0ZmYxNjU2YWY3YjY4OGNkZWZmNGQzYmIyYjM";
+}
+function TC2reload(){
+   document.getElementById("camaraTC2").src="https://cctvc.freeway.gov.tw/abs2mjpg/bmjpg?camera=467";
+}
 function ChangeMediaE(){
 	var d = new Date();
 	var t = d.getTime();
@@ -137,6 +210,21 @@ function ChangeMediaE(){
 var reloadcamE = setInterval("ChangeMediaE()",8600);
 
 
+
+
+
+
+
+
+function CW2reload(){
+   document.getElementById("camaraCW2").src="https://cctvc.freeway.gov.tw/abs2mjpg/bmjpg?camera=497";
+}
+function NT1reload(){
+   document.getElementById("camaraNT1").src="https://cctvc.freeway.gov.tw/abs2mjpg/bmjpg?camera=491";
+}
+function NT2reload(){
+   document.getElementById("camaraNT2").src="https://cctvc.freeway.gov.tw/abs2mjpg/bmjpg?camera=604";
+}
 function ChangeMediaF(){
 	var d = new Date();
 	var t = d.getTime();
@@ -144,13 +232,24 @@ function ChangeMediaF(){
 
   document.getElementById('camaraNT1').src = "https://cctvc.freeway.gov.tw/abs2mjpg/bmjpg?camera=491&ns="+t;
   document.getElementById('camaraNT2').src = "https://cctvc.freeway.gov.tw/abs2mjpg/bmjpg?camera=604&ns="+t;
-
-
-  
 }
 var reloadcamF = setInterval("ChangeMediaF()",8800);
 
 
+
+
+
+
+
+function UL1reload(){
+   document.getElementById("camaraUL1").src="https://cctvc.freeway.gov.tw/abs2mjpg/bmjpg?camera=468";
+}
+function UL2reload(){
+   document.getElementById("camaraUL2").src="https://cctvc.freeway.gov.tw/abs2mjpg/bmjpg?camera=578";
+}
+function CY2reload(){
+   document.getElementById("camaraCY2").src="https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=3";
+}
 function ChangeMediaG(){
 	var d = new Date();
 	var t = d.getTime();
@@ -158,17 +257,16 @@ function ChangeMediaG(){
   document.getElementById('camaraUL2').src = "https://cctvc.freeway.gov.tw/abs2mjpg/bmjpg?camera=578&ns="+t;
 
   document.getElementById('camaraCY2').src = "https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=3&ns="+t;
-
-
-  
 }
 var reloadcamG = setInterval("ChangeMediaG()",9000);
 
 
 
-function KH2reload(){
-   document.getElementById("camaraKH2").src="https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=132";
-}
+
+
+
+
+
 
 -->
 </script>
@@ -198,14 +296,14 @@ function KH2reload(){
   基隆
 </td>
 <td align="center">
-  <img src="" alt="Loading..." name="camara2" width="450" height="335" border="0" id="camara2"/>
+  <img src="" alt="Loading..." name="camara2" width="450" height="335" border="0" id="camara2" onclick="reload()"/>
 <br>(<a href="">國1</a>)
 
 </td>
 
 
 <td align="center">
-  <img src="https://cctvn.freeway.gov.tw/abs2mjpg/bmjpg?camera=10000" alt="Loading..." name="camaraKL2" width="450" height="335" border="0" id="camaraKL2"/>
+  <img src="https://cctvn.freeway.gov.tw/abs2mjpg/bmjpg?camera=10000" alt="Loading..." name="camaraKL2" width="450" height="335" border="0" id="camaraKL2" onclick="KL2reload()"/>
 <br>(<a href="https://cctvn.freeway.gov.tw/abs2mjpg/bmjpg?camera=10000">國1 基隆</a>)
 
 </td>
@@ -215,14 +313,14 @@ function KH2reload(){
   台北
 </td>
 <td align="center">
-  <img src="" alt="Loading..." name="camara2" width="450" height="335" border="0" id="camara2"/>
+  <img src="" alt="Loading..." name="camara2" width="450" height="335" border="0" id="camara2" onclick="reload()"/>
 <br>(<a href="">國1</a>)
 
 </td>
 
 
 <td align="center">
-  <img src="https://cctvn.freeway.gov.tw/abs2mjpg/bmjpg?camera=13510" alt="Loading..." name="camaraTP2" width="450" height="335" border="0" id="camaraTP2"/>
+  <img src="https://cctvn.freeway.gov.tw/abs2mjpg/bmjpg?camera=13510" alt="Loading..." name="camaraTP2" width="450" height="335" border="0" id="camaraTP2" onclick="TP2reload()"/>
 <br>(<a href="https://cctvn.freeway.gov.tw/abs2mjpg/bmjpg?camera=13510">國1 泰山</a>)
 
 </td>
@@ -232,14 +330,14 @@ function KH2reload(){
   桃園
 </td>
 <td align="center">
-<img src="" alt="Loading..." name="camara1" width="450" height="335" border="0" id="camara1"/>
+<img src="" alt="Loading..." name="camara1" width="450" height="335" border="0" id="camara1" onclick="reload()"/>
 <br>(<a href="">國1</a>)
 
 </td>
 
 
 <td align="center">
-<img src="https://cctvn.freeway.gov.tw/abs2mjpg/bmjpg?camera=16100" alt="Loading..." name="camaraTY2" width="450" height="335" border="0" id="camaraTY2"/>
+<img src="https://cctvn.freeway.gov.tw/abs2mjpg/bmjpg?camera=16100" alt="Loading..." name="camaraTY2" width="450" height="335" border="0" id="camaraTY2" onclick="TY2reload()"/>
 <br>(<a href="https://cctvn.freeway.gov.tw/abs2mjpg/bmjpg?camera=16100">國1 中壢</a>)
 
 </td>
@@ -250,14 +348,14 @@ function KH2reload(){
   新竹
 </td>
 <td align="center">
-<img src="" alt="Loading..." name="camara1" width="450" height="335" border="0" id="camara1"/>
+<img src="" alt="Loading..." name="camara1" width="450" height="335" border="0" id="camara1" onclick="reload()"/>
 <br>(<a href="">國1</a>)
 
 </td>
 
 
 <td align="center">
-<img src="https://cctvn.freeway.gov.tw/abs2mjpg/bmjpg?camera=19490" alt="Loading..." name="camaraST2" width="450" height="335" border="0" id="camaraST2"/>
+<img src="https://cctvn.freeway.gov.tw/abs2mjpg/bmjpg?camera=19490" alt="Loading..." name="camaraST2" width="450" height="335" border="0" id="camaraST2" onclick="ST2reload()"/>
 <br>(<a href="https://cctvn.freeway.gov.tw/abs2mjpg/bmjpg?camera=19490">國1 新竹</a>)
 
 </td>
@@ -268,14 +366,14 @@ function KH2reload(){
   苗栗
 </td>
 <td align="center">
-<img src="" alt="Loading..." name="camara1" width="450" height="335" border="0" id="camara1"/>
+<img src="" alt="Loading..." name="camara1" width="450" height="335" border="0" id="camara1" onclick="reload()"/>
 <br>(<a href="">國1</a>)
 
 </td>
 
 
 <td align="center">
-<img src="https://cctvc.freeway.gov.tw/abs2mjpg/bmjpg?camera=571" alt="Loading..." name="camaraML2" width="450" height="335" border="0" id="camaraML2"/>
+<img src="https://cctvc.freeway.gov.tw/abs2mjpg/bmjpg?camera=571" alt="Loading..." name="camaraML2" width="450" height="335" border="0" id="camaraML2" onclick="ML2reload()"/>
 <br>(<a href="https://cctvc.freeway.gov.tw/abs2mjpg/bmjpg?camera=571">國1 泰安</a>)
 
 </td>
@@ -288,14 +386,14 @@ function KH2reload(){
   台中
 </td>
 <td align="center">
-<img src="https://tcnvr2.taichung.gov.tw:7001/media/00-0f-7c-13-da-ac.mpjpeg?resolution=240p&auth=cHVibGljdmlld2VyOjVlMDA1Nzk1ZjA1NTA6YjA4MzE0ZmYxNjU2YWY3YjY4OGNkZWZmNGQzYmIyYjM" alt="Loading..." name="camaraTC1" width="450" height="335" border="0" id="camaraTC1" />
+<img src="https://tcnvr2.taichung.gov.tw:7001/media/00-0f-7c-13-da-ac.mpjpeg?resolution=240p&auth=cHVibGljdmlld2VyOjVlMDA1Nzk1ZjA1NTA6YjA4MzE0ZmYxNjU2YWY3YjY4OGNkZWZmNGQzYmIyYjM" alt="Loading..." name="camaraTC1" width="450" height="335" border="0" id="camaraTC1" onclick="TC1reload()"/>
 <br>(<a href="https://tcnvr2.taichung.gov.tw:7001/media/00-0f-7c-13-da-ac.mpjpeg?resolution=240p&auth=cHVibGljdmlld2VyOjVlMDA1Nzk1ZjA1NTA6YjA4MzE0ZmYxNjU2YWY3YjY4OGNkZWZmNGQzYmIyYjM">09140五權西路/忠勇路(右側車流往南屯交流道)</a>)
 
 </td>
 
 
 <td align="center">
-<img src="https://cctvc.freeway.gov.tw/abs2mjpg/bmjpg?camera=467" alt="Loading..." name="camaraTC2" width="450" height="335" border="0" id="camaraTC2"/>
+<img src="https://cctvc.freeway.gov.tw/abs2mjpg/bmjpg?camera=467" alt="Loading..." name="camaraTC2" width="450" height="335" border="0" id="camaraTC2" onclick="TC2reload()"/>
 <br>(<a href="https://cctvc.freeway.gov.tw/abs2mjpg/bmjpg?camera=467">國1 大雅</a>)
 
 </td>
@@ -306,14 +404,14 @@ function KH2reload(){
   彰化
 </td>
 <td align="center">
-<img src="" alt="Loading..." name="camara1" width="450" height="335" border="0" id="camara1"/>
+<img src="" alt="Loading..." name="camara1" width="450" height="335" border="0" id="camara1" onclick="reload()"/>
 <br>(<a href="">國1</a>)
 
 </td>
 
 
 <td align="center">
-<img src="https://cctvc.freeway.gov.tw/abs2mjpg/bmjpg?camera=497" alt="Loading..." name="camaraCW2" width="450" height="335" border="0" id="camaraCW2"/>
+<img src="https://cctvc.freeway.gov.tw/abs2mjpg/bmjpg?camera=497" alt="Loading..." name="camaraCW2" width="450" height="335" border="0" id="camaraCW2" onclick="CW2reload()"/>
 <br>(<a href="https://cctvc.freeway.gov.tw/abs2mjpg/bmjpg?camera=497">國1 彰化</a>)
 
 </td>
@@ -323,14 +421,14 @@ function KH2reload(){
   南投
 </td>
 <td align="center">
-  <img src="https://cctvc.freeway.gov.tw/abs2mjpg/bmjpg?camera=491" alt="Loading..." name="camaraNT1" width="450" height="335" border="0" id="camaraNT1"/>
+  <img src="https://cctvc.freeway.gov.tw/abs2mjpg/bmjpg?camera=491" alt="Loading..." name="camaraNT1" width="450" height="335" border="0" id="camaraNT1" onclick="NT1reload()"/>
 <br>(<a href="https://cctvc.freeway.gov.tw/abs2mjpg/bmjpg?camera=491">國6 國姓</a>)
 
 </td>
 
 
 <td align="center">
-<img src="https://cctvc.freeway.gov.tw/abs2mjpg/bmjpg?camera=604" alt="Loading..." name="camaraNT2" width="450" height="335" border="0" id="camaraNT2"/>
+<img src="https://cctvc.freeway.gov.tw/abs2mjpg/bmjpg?camera=604" alt="Loading..." name="camaraNT2" width="450" height="335" border="0" id="camaraNT2" onclick="NT2reload()"/>
 <br>(<a href="https://cctvc.freeway.gov.tw/abs2mjpg/bmjpg?camera=604">國6 埔里</a>)
 
 </td>
@@ -341,14 +439,14 @@ function KH2reload(){
   雲林
 </td>
 <td align="center">
-<img src="https://cctvc.freeway.gov.tw/abs2mjpg/bmjpg?camera=468" alt="Loading..." name="camaraUL1" width="450" height="335" border="0" id="camaraUL1"/>
+<img src="https://cctvc.freeway.gov.tw/abs2mjpg/bmjpg?camera=468" alt="Loading..." name="camaraUL1" width="450" height="335" border="0" id="camaraUL1" onclick="UL1reload()"/>
 <br>(<a href="https://cctvc.freeway.gov.tw/abs2mjpg/bmjpg?camera=468">國1 西螺</a>)
 
 </td>
 
 
 <td align="center">
-<img src="https://cctvc.freeway.gov.tw/abs2mjpg/bmjpg?camera=578" alt="Loading..." name="camaraUL2" width="450" height="335" border="0" id="camaraUL2"/>
+<img src="https://cctvc.freeway.gov.tw/abs2mjpg/bmjpg?camera=578" alt="Loading..." name="camaraUL2" width="450" height="335" border="0" id="camaraUL2" onclick="UL2reload()"/>
 <br>(<a href="https://cctvc.freeway.gov.tw/abs2mjpg/bmjpg?camera=578">國1 斗南</a>)
 
 </td>
@@ -359,14 +457,14 @@ function KH2reload(){
   嘉義
 </td>
 <td align="center">
-<img src="" alt="Loading..." name="camaraCY1" width="450" height="335" border="0" id="camaraCY1"/>
+<img src="" alt="Loading..." name="camaraCY1" width="450" height="335" border="0" id="camaraCY1" onclick="CY1reload()"/>
 <br>(<a href="">國1</a>)
 
 </td>
 
 
 <td align="center">
-<img src="https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=3" alt="Loading..." name="camaraCY2" width="450" height="335" border="0" id="camaraCY2"/>
+<img src="https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=3" alt="Loading..." name="camaraCY2" width="450" height="335" border="0" id="camaraCY2" onclick="CY2reload()"/>
 <br>(<a href="https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=3">國1 嘉義</a>)
 
 </td>
@@ -377,14 +475,14 @@ function KH2reload(){
   台南
 </td>
 <td align="center">
-<img src="https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=67" alt="Loading..." name="camaraTN1" width="450" height="335" border="0" id="camaraTN1"/>
+<img src="https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=67" alt="Loading..." name="camaraTN1" width="450" height="335" border="0" id="camaraTN1" onclick="TN1reload()"/>
 <br>(<a href="https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=67">國1 仁德</a>)
 
 </td>
 
 
 <td align="center">
-<img src="https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=51" alt="Loading..." name="camaraTN2" width="450" height="335" border="0" id="camaraTN2"/>
+<img src="https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=51" alt="Loading..." name="camaraTN2" width="450" height="335" border="0" id="camaraTN2" onclick="TN2reload()"/>
 <br>(<a href="https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=51">國1 永康</a>)
 
 </td>
@@ -396,7 +494,7 @@ function KH2reload(){
   高雄
 </td>
 <td align="center">
-<img src="https://cctv4.kctmc.nat.gov.tw/75f7e057/snapshot?t=1653614614142" alt="Loading..." name="camaraKH1" width="450" height="335" border="0" id="camaraKH1" />
+<img src="https://cctv4.kctmc.nat.gov.tw/75f7e057/snapshot?t=1653614614142" alt="Loading..." name="camaraKH1" width="450" height="335" border="0" id="camaraKH1" onclick="KH1reload()"/>
 <br>(<a href="https://cctv4.kctmc.nat.gov.tw/75f7e057/snapshot?t=1653614614142">三商街與五甲交流道口</a>)
 
 </td>
@@ -417,14 +515,14 @@ function KH2reload(){
   高雄大樹
 </td>
 <td align="center">
-<img src="https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=90" alt="Loading..." name="camaraKH3" width="450" height="335" border="0" id="camaraKH3" />
+<img src="https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=90" alt="Loading..." name="camaraKH3" width="450" height="335" border="0" id="camaraKH3" onclick="KH3reload()"/>
 <br>(<a href="https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=90">國1 鼎金系統</a>)
 
 </td>
 
 
 <td align="center">
-<img src="https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=456" alt="Loading..." name="camaraKH4" width="450" height="335" border="0" id="camaraKH4"/>
+<img src="https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=456" alt="Loading..." name="camaraKH4" width="450" height="335" border="0" id="camaraKH4" onclick="KH4reload()"/>
 <br>(<a href="https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=456">國10 仁武</a>)
 
 </td>
@@ -435,14 +533,14 @@ function KH2reload(){
   屏東
 </td>
 <td align="center">
-<img src="" alt="Loading..." name="camara1" width="450" height="335" border="0" id="camara1"/>
+<img src="" alt="Loading..." name="camara1" width="450" height="335" border="0" id="camara1" onclick="reload()"/>
 <br>(<a href="">國1</a>)
 
 </td>
 
 
 <td align="center">
-<img src="" alt="Loading..." name="camara2" width="450" height="335" border="0" id="camara2"/>
+<img src="" alt="Loading..." name="camara2" width="450" height="335" border="0" id="camara2" onclick="reload()"/>
 <br>(<a href="">國1</a>)
 
 </td>
@@ -453,14 +551,14 @@ function KH2reload(){
   宜蘭
 </td>
 <td align="center">
-<img src="" alt="Loading..." name="camara1" width="450" height="335" border="0" id="camara1"/>
+<img src="" alt="Loading..." name="camara1" width="450" height="335" border="0" id="camara1" onclick="reload()"/>
 <br>(<a href="">國1</a>)
 
 </td>
 
 
 <td align="center">
-<img src="" alt="Loading..." name="camara2" width="450" height="335" border="0" id="camara2"/>
+<img src="" alt="Loading..." name="camara2" width="450" height="335" border="0" id="camara2" onclick="reload()"/>
 <br>(<a href="">國1</a>)
 
 </td>
@@ -471,14 +569,14 @@ function KH2reload(){
   花蓮
 </td>
 <td align="center">
-<img src="" alt="Loading..." name="camara1" width="450" height="335" border="0" id="camara1"/>
+<img src="" alt="Loading..." name="camara1" width="450" height="335" border="0" id="camara1" onclick="reload()"/>
 <br>(<a href="">國1</a>)
 
 </td>
 
 
 <td align="center">
-<img src="" alt="Loading..." name="camara2" width="450" height="335" border="0" id="camara2"/>
+<img src="" alt="Loading..." name="camara2" width="450" height="335" border="0" id="camara2" onclick="reload()"/>
 <br>(<a href="">國1</a>)
 
 </td>
@@ -489,14 +587,14 @@ function KH2reload(){
   台東
 </td>
 <td align="center">
-<img src="" alt="Loading..." name="camara1" width="450" height="335" border="0" id="camara1"/>
+<img src="" alt="Loading..." name="camara1" width="450" height="335" border="0" id="camara1" onclick="reload()"/>
 <br>(<a href="">國1</a>)
 
 </td>
 
 
 <td align="center">
-<img src="" alt="Loading..." name="camara2" width="450" height="335" border="0" id="camara2"/>
+<img src="" alt="Loading..." name="camara2" width="450" height="335" border="0" id="camara2" onclick="reload()"/>
 <br>(<a href="">國1</a>)
 
 </td>
@@ -507,14 +605,14 @@ function KH2reload(){
   Ｘ
 </td>
 <td align="center">
-<img src="" alt="Loading..." name="camara1" width="450" height="335" border="0" id="camara1"/>
+<img src="" alt="Loading..." name="camara1" width="450" height="335" border="0" id="camara1" onclick="reload()"/>
 <br>(<a href="">國1</a>)
 
 </td>
 
 
 <td align="center">
-<img src="" alt="Loading..." name="camara2" width="450" height="335" border="0" id="camara2"/>
+<img src="" alt="Loading..." name="camara2" width="450" height="335" border="0" id="camara2" onclick="reload()"/>
 <br>(<a href="">國1</a>)
 
 </td>
