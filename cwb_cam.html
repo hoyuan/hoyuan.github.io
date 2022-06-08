@@ -265,6 +265,17 @@ var reloadcamG = setInterval("ChangeMediaG()",9000);
 
 
 
+function PT2reload(){
+   document.getElementById("camaraPT2").src="https://cctv-ss06.thb.gov.tw/T26-31K+100";
+}
+function ChangeMediaH(){
+	var d = new Date();
+	var t = d.getTime();
+  document.getElementById('camaraPT2').src = "https://cctv-ss06.thb.gov.tw/T26-31K+100&ns="+t;
+}
+var reloadcamG = setInterval("ChangeMediaH()",9200);
+
+
 
 
 
@@ -540,8 +551,8 @@ var reloadcamG = setInterval("ChangeMediaG()",9000);
 
 
 <td align="center">
-<img src="" alt="Loading..." name="camara2" width="450" height="335" border="0" id="camara2" onclick="reload()"/>
-<br>(<a href="">國1</a>)
+<img src="https://cctv-ss06.thb.gov.tw/T26-31K+100" alt="Loading..." name="camaraPT2" width="450" height="335" border="0" id="camaraPT2" onclick="PT2reload()"/>
+<br>(<a href="https://cctv-ss06.thb.gov.tw/T26-31K+100">台二六31k+100(恆春至墾丁之間)</a>)
 
 </td>
 
