@@ -279,6 +279,59 @@ var reloadcamH = setInterval("ChangeMediaH()",9200);
 
 
 
+var player1;
+
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api"; // Take the API address.
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag); // Include the API inside the page.
+
+function onYouTubeIframeAPIReady() {
+    player1 = new YT.Player("YTvideoPT1", {
+        videoId: "KjxDilWq2j4", //你的Youtube 影片ID
+        events: {
+            onStateChange: function(event) {
+                if (event.data == YT.PlayerState.PLAYING) {
+                    //alert("hello!"); //這邊是當開始播放後，需要做的動作
+                }
+            },
+
+            onReady: function(event) {
+              //alert("hello ok!"); //這邊是當開始播放後，需要做的動作
+              //player1.playVideo(); // Here we are auto playing the video on loading the page.
+              event.target.mute().playVideo();
+            }
+
+        }
+
+    });
+
+
+    player2 = new YT.Player("YTvideoPT2", {
+        videoId: "mEg9B7xgV4E", //你的Youtube 影片ID
+        events: {
+            onStateChange: function(event) {
+                if (event.data == YT.PlayerState.PLAYING) {
+                    //alert("hello!"); //這邊是當開始播放後，需要做的動作
+                }
+            },
+
+            onReady: function(event) {
+              //alert("hello ok!"); //這邊是當開始播放後，需要做的動作
+              //player1.playVideo(); // Here we are auto playing the video on loading the page.
+              event.target.mute().playVideo();
+            }
+
+        }
+
+    });
+
+
+
+}
+
+
+
 -->
 </script>
 
@@ -545,7 +598,7 @@ var reloadcamH = setInterval("ChangeMediaH()",9200);
 </td>
 <td align="center">
 <img src="" alt="Loading..." name="camara1" width="450" height="335" border="0" id="camara1" onclick="reload()"/>
-<br>(<a href="">國1</a>)
+<br>(<a href="">xx</a>)
 
 </td>
 
@@ -555,6 +608,25 @@ var reloadcamH = setInterval("ChangeMediaH()",9200);
 <br>(<a href="https://cctv-ss06.thb.gov.tw/T26-31K+100">台二六31k+100(恆春至墾丁之間)</a>)
 
 </td>
+
+
+<tr>
+<td>
+  屏東B
+</td>
+<td align="center">
+<div id="YTvideoPT1"></div>
+<br>(<a href="https://www.youtube.com/watch?v=KjxDilWq2j4">墾丁大街(大尖山旅社旁)</a>)
+
+</td>
+
+
+<td align="center">
+  <div id="YTvideoPT2"></div>
+<br>(<a href="https://www.youtube.com/watch?v=mEg9B7xgV4E">墾丁 後壁湖</a>)
+
+</td>
+
 
 
 <tr>
