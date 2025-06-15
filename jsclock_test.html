@@ -99,7 +99,7 @@
       timeInput.setSelectionRange(0, 99999); // for mobile
       try {
         const success = document.execCommand("copy");
-        if (success) alert("已複製 Company 時間: " + timeInput.value);
+        if (success) ;//alert("已複製 Company 時間: " + timeInput.value);
         else alert("複製失敗，請手動複製");
       } catch (err) {
         alert("複製失敗：" + err);
