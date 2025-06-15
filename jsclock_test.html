@@ -93,28 +93,19 @@
       return null;
     }
 
-function copyCompanyTime() {
-  const timeInput = document.getElementById("companyTimeRaw");
-  const copyBtn = document.getElementById("copyBtn");
 
-  timeInput.select();
-  timeInput.setSelectionRange(0, 99999); // for mobile
-
-  try {
-    const success = document.execCommand("copy");
-    if (success) {
-      copyBtn.innerText = "✅: " + timeInput.value;
-      setTimeout(() => {
-        copyBtn.innerText = "複製 Company 時間";
-      }, 3000);
-    } else {
-      copyBtn.innerText = "❌ 複製失敗";
+    function copyCompanyTime() {
+      const timeInput = document.getElementById("companyTimeRaw");
+      timeInput.select();
+      timeInput.setSelectionRange(0, 99999); // for mobile
+      try {
+        const success = document.execCommand("copy");
+        if (success) ;//alert("已複製 Company 時間: " + timeInput.value);
+        else alert("複製失敗，請手動複製");
+      } catch (err) {
+        alert("複製失敗：" + err);
+      }
     }
-  } catch (err) {
-    copyBtn.innerText = "⚠️ 錯誤：" + err;
-  }
-}
-
   </script>
 </head>
 
@@ -128,7 +119,7 @@ function copyCompanyTime() {
     <strong>Company:</strong>
     <div id="clockD"></div>
     <input type="text" id="companyTimeRaw" style="opacity:0; position:absolute; left:-9999px;" readonly />
-    <button onclick="copyCompanyTime()">複製 Company 時間d</button>
+    <button onclick="copyCompanyTime()">複製 Company 時間e</button>
     <div id="clockM"></div>
     <div id="clockE"></div>
   </div>
