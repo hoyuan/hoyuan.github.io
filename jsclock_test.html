@@ -1,23 +1,20 @@
 <html>
   <head>
   <script>
-    function copyCompanyTime() {
-      var rawHTML = document.getElementById("clockD").innerHTML;
-      var match = rawHTML.match(/(\d{2}:\d{2}:\d{2})/);
-      if (match && match[1]) {
-        var timeStr = match[1];
-        navigator.clipboard.writeText(timeStr)
-          .then(() => {
-            alert("已複製 Company 時間: " + timeStr);
-          })
-          .catch(err => {
-            alert("複製失敗：" + err);
-          });
-      } else {
-        alert("無法取得時間內容");
-      }
-    }
-
+function copyCompanyTime() {
+  var timeStr = document.getElementById("clockD").innerText;
+  if (timeStr && timeStr.match(/^\d{2}:\d{2}:\d{2}$/)) {
+    navigator.clipboard.writeText(timeStr)
+      .then(() => {
+        alert("已複製 Company 時間: " + timeStr);
+      })
+      .catch(err => {
+        alert("複製失敗：" + err);
+      });
+  } else {
+    alert("無法取得時間內容");
+  }
+}
     
     function getTimeRemaining(stime,endtime){ 
       const total = Date.parse(endtime) - Date.parse(stime); 
@@ -176,7 +173,7 @@ function getCookieValueByIndex(startIndex) {
     <div id="clockE"></div>
 
     <br>
-    <button onclick="copyCompanyTime()">複製 Company 時間</button>
+    <button onclick="copyCompanyTime()">複製 Company 時間b</button>
     <br>
     <br>
     <br>
