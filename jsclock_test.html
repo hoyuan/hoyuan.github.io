@@ -93,18 +93,28 @@
       return null;
     }
 
-    function copyCompanyTime() {
-      const timeInput = document.getElementById("companyTimeRaw");
-      timeInput.select();
-      timeInput.setSelectionRange(0, 99999); // for mobile
-      try {
-        const success = document.execCommand("copy");
-        if (success) ;//alert("已複製 Company 時間: " + timeInput.value);
-        else alert("複製失敗，請手動複製");
-      } catch (err) {
-        alert("複製失敗：" + err);
-      }
+function copyCompanyTime() {
+  const timeInput = document.getElementById("companyTimeRaw");
+  const copyBtn = document.getElementById("copyBtn");
+
+  timeInput.select();
+  timeInput.setSelectionRange(0, 99999); // for mobile
+
+  try {
+    const success = document.execCommand("copy");
+    if (success) {
+      copyBtn.innerText = "✅: " + timeInput.value;
+      setTimeout(() => {
+        copyBtn.innerText = "複製 Company 時間";
+      }, 3000);
+    } else {
+      copyBtn.innerText = "❌ 複製失敗";
     }
+  } catch (err) {
+    copyBtn.innerText = "⚠️ 錯誤：" + err;
+  }
+}
+
   </script>
 </head>
 
