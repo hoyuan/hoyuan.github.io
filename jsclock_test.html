@@ -1,189 +1,134 @@
+<!DOCTYPE html>
 <html>
-  <head>
+<head>
+  <meta charset="UTF-8">
+  <title>時間顯示與複製</title>
   <script>
-function copyCompanyTime() {
-  var timeStr = document.getElementById("clockD").innerText;
-  if (timeStr && timeStr.match(/^\d{2}:\d{2}:\d{2}$/)) {
-    navigator.clipboard.writeText(timeStr)
-      .then(() => {
-        alert("已複製 Company 時間: " + timeStr);
-      })
-      .catch(err => {
-        alert("複製失敗：" + err);
-      });
-  } else {
-    alert("無法取得時間內容");
-  }
-}
-    
-    function getTimeRemaining(stime,endtime){ 
-      const total = Date.parse(endtime) - Date.parse(stime); 
-      const seconds = Math.floor( (total/1000) % 60 ); 
-      const minutes = Math.floor( (total/1000/60) % 60 ); 
-      const hours = Math.floor( (total/(1000*60*60)) % 24 ); 
-      const days = Math.floor( total/(1000*60*60*24) ); 
-    
-      return { 
-        total, 
-        days, 
-        hours, 
-        minutes, 
-        seconds 
-      }; 
-    } 
+    function getTimeRemaining(stime, endtime) {
+      let total = Date.parse(endtime) - Date.parse(stime);
+      if (total < 0) total = 0;
+      const seconds = Math.floor((total / 1000) % 60);
+      const minutes = Math.floor((total / 1000 / 60) % 60);
+      const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+      const days = Math.floor(total / (1000 * 60 * 60 * 24));
+      return { total, days, hours, minutes, seconds };
+    }
 
-    function startTime(){
-      //  var orgTime = new Date();
-      //  var diffTime.setSeconds(orgTime.getSeconds()-15);
-      //console.log(`realTime = ${diffTime.getHours()}:${diffTime.getMinutes()}`)
-      
-      //手機時間
-      var today = new Date();
-      var Thh = today.getHours();
-      var Tmm = today.getMinutes();
-      var Tss = today.getSeconds();
+    function startTime() {
+      const today = new Date();
+      let setdiff = parseInt(getCookie('setdiffV'));
+      if (isNaN(setdiff)) setdiff = 0;
 
-      Tmm = checkTime(Tmm);
-      Tss = checkTime(Tss);
-      document.getElementById('clockT').innerHTML = "<font size=5 color=#FFFFFF>" + Thh + ":" + Tmm + ":" + Tss + "</font>";
+      // 顯示手機時間
+      let Thh = today.getHours();
+      let Tmm = checkTime(today.getMinutes());
+      let Tss = checkTime(today.getSeconds());
+      document.getElementById('clockT').innerHTML =
+        "<span style='font-size:24px; color:white;'>" + Thh + ":" + Tmm + ":" + Tss + "</span>";
 
+      // 公司時間 = 手機時間 + setdiff 秒
+      const diffTime = new Date(today.getTime() + setdiff * 1000);
+      let Dhh = diffTime.getHours();
+      let Dmm = checkTime(diffTime.getMinutes());
+      let Dss = checkTime(diffTime.getSeconds());
+      document.getElementById('clockD').innerHTML =
+        "<span style='font-size:32px; color:white;'>" + Dhh + ":" + Dmm + ":" + Dss + "</span>";
+      document.getElementById('companyTimeRaw').value = Dhh + ":" + Dmm + ":" + Dss;
 
-      //打卡鐘時間
-      var diffTime= new Date();
-      var setdiff=parseInt(getCookie('setdiffV'));//+3;
-      diffTime.setSeconds(today.getSeconds()+setdiff);  //手機與打卡鐘的時間差
-      //console.log(diffTime.getSeconds());
-      
-      var Dhh = diffTime.getHours();
-      var Dmm = diffTime.getMinutes();
-      var Dss = diffTime.getSeconds();
-      
-      
-      Dmm = checkTime(Dmm);
-      Dss = checkTime(Dss);
-      document.getElementById('clockD').innerHTML = "<font size=7 color=#FFFFFF>" + Dhh + ":" + Dmm + ":" + Dss + "</font>";
-      
-      var STRsetdiff="";
-      if (setdiff >= 0)
-        STRsetdiff = "+" + setdiff;
-      else
-        STRsetdiff = setdiff;
-      document.getElementById('setdiff').innerHTML = "<font size=4 color=#FFFFFF>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + STRsetdiff + "</font>";
+      // 顯示時間差
+      let STRsetdiff = (setdiff >= 0) ? "+" + setdiff : setdiff;
+      document.getElementById('setdiff').innerHTML =
+        "<span style='font-size:16px; color:white; margin-left:20px;'>" + STRsetdiff + "</span>";
 
-
-      //距離午休打卡時間差
-      var midTime= new Date();
-      midTime.setHours(12);
-      midTime.setMinutes(30);
-      midTime.setSeconds(00);
-      //console.log(diffTime.getSeconds());
-      
-      var MxxTime=getTimeRemaining(diffTime, midTime);  //兩個時間相減            
-      var Mhh = MxxTime.hours;
-      var Mmm = MxxTime.minutes;
-      var Mss = MxxTime.seconds;
-
-
-      
-      Mhh = checkTime(Mhh);
-      Mmm = checkTime(Mmm);
-      Mss = checkTime(Mss);
-      if (Mss >= 0 && Dhh >= 12 && Dhh <=12)
-        document.getElementById('clockM').innerHTML = "<br><font color=#FFFFFF>CompMid:</font><br><font size=6 color=#FFFFFF>" + Mhh + ":" + Mmm + ":" + Mss + "</font>";
+      // 距離午休 12:30 倒數
+      const midTime = new Date();
+      midTime.setHours(12, 30, 0, 0);
+      const MxxTime = getTimeRemaining(diffTime, midTime);
+      let Mhh = checkTime(MxxTime.hours);
+      let Mmm = checkTime(MxxTime.minutes);
+      let Mss = checkTime(MxxTime.seconds);
+      if (MxxTime.total > 0 && Dhh === 12)
+        document.getElementById('clockM').innerHTML =
+          "<br><span style='color:white;'>CompMid:</span><br><span style='font-size:28px; color:white;'>" +
+          Mhh + ":" + Mmm + ":" + Mss + "</span>";
       else
         document.getElementById('clockM').innerHTML = "";
 
-
-      //距離下班打卡時間差
-      var endTime= new Date();
-      endTime.setHours(16);
-      endTime.setMinutes(50);
-      endTime.setSeconds(00);
-      //console.log(diffTime.getSeconds());
-      
-      var xxTime=getTimeRemaining(diffTime, endTime);  //兩個時間相減            
-      var Ehh = xxTime.hours;
-      var Emm = xxTime.minutes;
-      var Ess = xxTime.seconds;
-
-
-      
-      Ehh = checkTime(Ehh);
-      Emm = checkTime(Emm);
-      Ess = checkTime(Ess);
-      if (Ess >= 0 && Dhh >= 13 && Dhh <=16)
-        document.getElementById('clockE').innerHTML = "<br><font color=#FFFFFF>CompEnd:</font><br><font size=6 color=#FFFFFF>" + Ehh + ":" + Emm + ":" + Ess + "</font>";
+      // 距離下班 16:50 倒數
+      const endTime = new Date();
+      endTime.setHours(16, 50, 0, 0);
+      const xxTime = getTimeRemaining(diffTime, endTime);
+      let Ehh = checkTime(xxTime.hours);
+      let Emm = checkTime(xxTime.minutes);
+      let Ess = checkTime(xxTime.seconds);
+      if (xxTime.total > 0 && Dhh >= 13 && Dhh <= 16)
+        document.getElementById('clockE').innerHTML =
+          "<br><span style='color:white;'>CompEnd:</span><br><span style='font-size:28px; color:white;'>" +
+          Ehh + ":" + Emm + ":" + Ess + "</span>";
       else
         document.getElementById('clockE').innerHTML = "";
 
-
-
-
-
-
-
-      var timeoutId = setTimeout(startTime, 50);
+      setTimeout(startTime, 500); // 更新頻率：0.5秒
     }
 
-    function checkTime(i){
-      if(i < 10) {
-          i = "0" + i;
+    function checkTime(i) {
+      return i < 10 ? "0" + i : i;
+    }
+
+    function doCookieSetup(name, value) {
+      const expire_days = 365;
+      const d = new Date();
+      d.setTime(d.getTime() + (expire_days * 24 * 60 * 60 * 1000));
+      const expires = "expires=" + d.toGMTString();
+      document.cookie = name + "=" + escape(value) + "; " + expires + "; path=/";
+    }
+
+    function getCookie(name) {
+      const arg = escape(name) + "=";
+      const cookies = document.cookie.split(";");
+      for (let i = 0; i < cookies.length; i++) {
+        let c = cookies[i].trim();
+        if (c.indexOf(arg) === 0) return unescape(c.substring(arg.length));
       }
-      return i;
+      return null;
     }
 
-function doCookieSetup(name, value) { //設定 Set cookie
-    expire_days = 365; // 過期日期(天)
-    var d = new Date();
-    d.setTime(d.getTime() + (expire_days * 24 * 60 * 60 * 1000));
-    var expires = "expires=" + d.toGMTString();
-    document.cookie = name + "=" + escape(value) + "; " + expires + '; domain=hoyuan.github.io; path=/';
-}
-
-function getCookie(name) { //查詢 Get cookie by name
-  var arg = escape(name) + "=";
-  var nameLen = arg.length;
-  var cookieLen = document.cookie.length;
-  var i = 0;
-  while (i < cookieLen) { //& lt;
-    var j = i + nameLen;
-    if (document.cookie.substring(i, j) == arg) return getCookieValueByIndex(j);
-    i = document.cookie.indexOf(" ", i) + 1;
-    if (i == 0) break;
-  }
-  return null;
-}
-
-function getCookieValueByIndex(startIndex) {
-  var endIndex = document.cookie.indexOf(";", startIndex);
-  if (endIndex == -1) endIndex = document.cookie.length;
-  return unescape(document.cookie.substring(startIndex, endIndex));
-}
-
+    function copyCompanyTime() {
+      const timeInput = document.getElementById("companyTimeRaw");
+      timeInput.select();
+      timeInput.setSelectionRange(0, 99999); // for mobile
+      try {
+        const success = document.execCommand("copy");
+        if (success) alert("已複製 Company 時間: " + timeInput.value);
+        else alert("複製失敗，請手動複製");
+      } catch (err) {
+        alert("複製失敗：" + err);
+      }
+    }
   </script>
-  </head>  
+</head>
 
-  <body bgcolor=#000000 onload="startTime()">
-    <font color=#FFFFFF>Phone:</font>
-    <div id="clockT"></div><div id="setdiff"></div>
-    <br>
-    <font color=#FFFFFF>Company:</font>
+<body style="background-color:black; color:white;" onload="startTime()">
+  <div>
+    <strong>Phone:</strong> <div id="clockT"></div>
+    <div id="setdiff"></div>
+  </div>
+  <br>
+  <div>
+    <strong>Company:</strong>
     <div id="clockD"></div>
+    <input type="text" id="companyTimeRaw" style="opacity:0; position:absolute; left:-9999px;" readonly />
+    <button onclick="copyCompanyTime()">複製 Company 時間c</button>
     <div id="clockM"></div>
     <div id="clockE"></div>
+  </div>
 
-    <br>
-    <button onclick="copyCompanyTime()">複製 Company 時間b</button>
-    <br>
-    <br>
-    <br>
-    <br>
-<form><!--設定固定 Cookie：-->
-  <font color=#FFFFFF>diff:</font> <input name="cValue" type="text" size="12"/>
-  <input onclick="doCookieSetup('setdiffV', this.form.cValue.value)"
-  type="button" value="set" />
-</form>    
+  <br><br><br>
 
-  </body>
-  
+  <form>
+    <label>設定秒差：</label>
+    <input name="cValue" type="text" size="5" />
+    <input type="button" value="Set" onclick="doCookieSetup('setdiffV', this.form.cValue.value)" />
+  </form>
+</body>
 </html>
