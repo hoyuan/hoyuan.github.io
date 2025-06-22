@@ -106,6 +106,17 @@
         alert("複製失敗：" + err);
       }
     }
+
+function resetSetdiff() {
+  doCookieSetup('setdiffV', 0);
+  const resetBtn = event.target;
+  resetBtn.value = "已歸零";
+  resetBtn.disabled = true;
+  setTimeout(() => {
+    resetBtn.value = "歸零秒差";
+    resetBtn.disabled = false;
+  }, 2000);
+}    
   </script>
 </head>
 
@@ -130,6 +141,8 @@
     <label>設定秒差：</label>
     <input name="cValue" type="text" size="5" />
     <input type="button" value="Set" onclick="doCookieSetup('setdiffV', this.form.cValue.value)" />
+    <input type="button" value="歸零秒差" onclick="resetSetdiff()" />
   </form>
+
 </body>
 </html>
