@@ -1,153 +1,129 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
-  <title>時間顯示與複製</title>
-  <script>
-    function getTimeRemaining(stime, endtime) {
-      let total = Date.parse(endtime) - Date.parse(stime);
-      if (total < 0) total = 0;
-      const seconds = Math.floor((total / 1000) % 60);
-      const minutes = Math.floor((total / 1000 / 60) % 60);
-      const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
-      const days = Math.floor(total / (1000 * 60 * 60 * 24));
-      return { total, days, hours, minutes, seconds };
-    }
-
-    function startTime() {
-      const today = new Date();
-      let setdiff = parseInt(getCookie('setdiffV'));
-      if (isNaN(setdiff)) setdiff = 0;
-
-      // 顯示手機時間
-      let Thh = today.getHours();
-      let Tmm = checkTime(today.getMinutes());
-      let Tss = checkTime(today.getSeconds());
-      document.getElementById('clockT').innerHTML =
-        "<span style='font-size:24px; color:white;'>" + Thh + ":" + Tmm + ":" + Tss + "</span>";
-
-      // 公司時間 = 手機時間 + setdiff 秒
-      const diffTime = new Date(today.getTime() + setdiff * 1000);
-      let Dhh = diffTime.getHours();
-      let Dmm = checkTime(diffTime.getMinutes());
-      let Dss = checkTime(diffTime.getSeconds());
-      document.getElementById('clockD').innerHTML =
-        "<span style='font-size:32px; color:white;'>" + Dhh + ":" + Dmm + ":" + Dss + "</span>";
-      document.getElementById('companyTimeRaw').value = Dhh + ":" + Dmm + ":" + Dss;
-
-      // 顯示時間差
-      let STRsetdiff = (setdiff >= 0) ? "+" + setdiff : setdiff;
-      document.getElementById('setdiff').innerHTML =
-        "<span style='font-size:16px; color:white; margin-left:20px;'>" + STRsetdiff + "</span>";
-
-      // 距離午休 12:30 倒數
-      const midTime = new Date();
-      midTime.setHours(12, 30, 0, 0);
-      const MxxTime = getTimeRemaining(diffTime, midTime);
-      let Mhh = checkTime(MxxTime.hours);
-      let Mmm = checkTime(MxxTime.minutes);
-      let Mss = checkTime(MxxTime.seconds);
-      if (MxxTime.total > 0 && Dhh === 12)
-        document.getElementById('clockM').innerHTML =
-          "<br><span style='color:white;'>CompMid:</span><br><span style='font-size:28px; color:white;'>" +
-          Mhh + ":" + Mmm + ":" + Mss + "</span>";
-      else
-        document.getElementById('clockM').innerHTML = "";
-
-      // 距離下班 16:50 倒數
-      const endTime = new Date();
-      endTime.setHours(16, 50, 0, 0);
-      const xxTime = getTimeRemaining(diffTime, endTime);
-      let Ehh = checkTime(xxTime.hours);
-      let Emm = checkTime(xxTime.minutes);
-      let Ess = checkTime(xxTime.seconds);
-      if (xxTime.total > 0 && Dhh >= 13 && Dhh <= 16)
-        document.getElementById('clockE').innerHTML =
-          "<br><span style='color:white;'>CompEnd:</span><br><span style='font-size:28px; color:white;'>" +
-          Ehh + ":" + Emm + ":" + Ess + "</span>";
-      else
-        document.getElementById('clockE').innerHTML = "";
-
-      setTimeout(startTime, 500); // 更新頻率：0.5秒
-    }
-
-    function checkTime(i) {
-      return i < 10 ? "0" + i : i;
-    }
-
-    function doCookieSetup(name, value) {
-      const expire_days = 365;
-      const d = new Date();
-      d.setTime(d.getTime() + (expire_days * 24 * 60 * 60 * 1000));
-      const expires = "expires=" + d.toGMTString();
-      document.cookie = name + "=" + escape(value) + "; " + expires + "; path=/";
-    }
-
-    function getCookie(name) {
-      const arg = escape(name) + "=";
-      const cookies = document.cookie.split(";");
-      for (let i = 0; i < cookies.length; i++) {
-        let c = cookies[i].trim();
-        if (c.indexOf(arg) === 0) return unescape(c.substring(arg.length));
-      }
-      return null;
-    }
-
-    function copyCompanyTime() {
-      const timeInput = document.getElementById("companyTimeRaw");
-      const copyBtn = document.getElementById("copyBtn");
-      timeInput.select();
-      timeInput.setSelectionRange(0, 99999); // for mobile
-
-      try {
-        const success = document.execCommand("copy");
-        if (success) {
-          copyBtn.textContent = "已複製 Company 時間";
-          copyBtn.disabled = true;
-          setTimeout(() => {
-            copyBtn.textContent = "複製 Company 時間";
-            copyBtn.disabled = false;
-          }, 2000);
-        } else {
-          copyBtn.textContent = "複製失敗";
-        }
-      } catch (err) {
-        copyBtn.textContent = "複製失敗";
-      }
-    }
-
-    function resetSetdiff() {
-      doCookieSetup('setdiffV', 0);
-      setTimeout(() => {
-        startTime(); // 立即更新畫面
-      }, 100);
-    }
-  </script>
+  <title>公司時間顯示工具</title>
+  <style>
+    body { background-color: black; color: white; font-family: sans-serif; }
+    #clockT, #clockD { font-size: 24px; }
+    #clockD { font-size: 32px; margin-bottom: 5px; }
+    .label { font-weight: bold; }
+    .countdown { font-size: 28px; margin-top: 5px; }
+    .small { font-size: 16px; margin-left: 10px; }
+    button { margin: 5px 0; padding: 5px 10px; }
+  </style>
 </head>
+<body onload="initClocks()">
 
-<body style="background-color:black; color:white;" onload="startTime()">
   <div>
-    <strong>Phone:</strong>
-    <div id="clockT"></div>
-    <div id="setdiff"></div>
+    <span class="label">Phone:</span> <span id="clockT"></span>
+    <span id="setdiff" class="small"></span>
   </div>
-  <br>
-  <div>
-    <strong>Company:</strong>
-    <div id="clockD"></div>
-    <input type="text" id="companyTimeRaw" style="opacity:0; position:absolute; left:-9999px;" readonly />
+
+  <div style="margin-top: 20px;">
+    <span class="label">Company:</span> <span id="clockD"></span><br>
+    <input id="companyTimeRaw" type="text" readonly style="opacity:0; position:absolute; left:-9999px;">
     <button id="copyBtn" onclick="copyCompanyTime()">複製 Company 時間</button>
     <div id="clockM"></div>
     <div id="clockE"></div>
   </div>
 
-  <br><br><br>
-
-  <form>
+  <form style="margin-top: 30px;">
     <label>設定秒差：</label>
-    <input name="cValue" type="text" size="5" />
-    <input type="button" value="Set" onclick="doCookieSetup('setdiffV', this.form.cValue.value)" />
-    <input type="button" value="歸零秒差b" onclick="resetSetdiff()" />
+    <input type="number" id="diffInput" size="5">
+    <input type="button" value="Set" onclick="setDiff()">
+    <input type="button" value="歸零秒差" onclick="resetDiff()">
   </form>
+
+  <script>
+    function initClocks() {
+      updateClocks();
+    }
+
+    function getCookie(name) {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      return parts.length === 2 ? unescape(parts.pop().split(';').shift()) : null;
+    }
+
+    function setCookie(name, value, days = 365) {
+      const expires = new Date(Date.now() + days * 864e5).toUTCString();
+      document.cookie = `${name}=${escape(value)}; expires=${expires}; path=/`;
+    }
+
+    function updateClocks() {
+      const now = new Date();
+      let setdiff = parseInt(getCookie('setdiffV')) || 0;
+
+      // 顯示手機時間
+      document.getElementById('clockT').textContent = formatTime(now);
+      document.getElementById('setdiff').textContent = `差值: ${setdiff >= 0 ? '+' : ''}${setdiff}秒`;
+
+      // 公司時間
+      const company = new Date(now.getTime() + setdiff * 1000);
+      document.getElementById('clockD').textContent = formatTime(company);
+      document.getElementById('companyTimeRaw').value = formatTime(company);
+
+      // 倒數午休
+      const noon = new Date(company); noon.setHours(12, 30, 0, 0);
+      const midRemain = getCountdown(company, noon);
+      document.getElementById('clockM').innerHTML = (midRemain.total > 0 && company.getHours() === 12)
+        ? `<span class="label">CompMid:</span><br><span class="countdown">${midRemain.time}</span>` : "";
+
+      // 倒數下班
+      const end = new Date(company); end.setHours(16, 50, 0, 0);
+      const endRemain = getCountdown(company, end);
+      document.getElementById('clockE').innerHTML = (endRemain.total > 0 && company.getHours() >= 13 && company.getHours() <= 16)
+        ? `<span class="label">CompEnd:</span><br><span class="countdown">${endRemain.time}</span>` : "";
+
+      setTimeout(updateClocks, 500);
+    }
+
+    function formatTime(date) {
+      return `${pad(date.getHours())}:${pad(date.getMinutes())}:${pad(date.getSeconds())}`;
+    }
+
+    function pad(n) {
+      return n < 10 ? '0' + n : n;
+    }
+
+    function getCountdown(now, target) {
+      let total = target - now;
+      if (total < 0) total = 0;
+      const hours = pad(Math.floor(total / 1000 / 60 / 60) % 24);
+      const minutes = pad(Math.floor(total / 1000 / 60) % 60);
+      const seconds = pad(Math.floor(total / 1000) % 60);
+      return { total, time: `${hours}:${minutes}:${seconds}` };
+    }
+
+    function setDiff() {
+      const val = parseInt(document.getElementById('diffInput').value);
+      setCookie('setdiffV', isNaN(val) ? 0 : val);
+    }
+
+    function resetDiff() {
+      setCookie('setdiffV', 0);
+      document.getElementById('diffInput').value = 0;
+    }
+
+    function copyCompanyTime() {
+      const input = document.getElementById('companyTimeRaw');
+      const btn = document.getElementById('copyBtn');
+      input.select();
+      input.setSelectionRange(0, 99999);
+      try {
+        if (document.execCommand('copy')) {
+          btn.textContent = "已複製 Company 時間";
+          btn.disabled = true;
+          setTimeout(() => {
+            btn.textContent = "複製 Company 時間";
+            btn.disabled = false;
+          }, 2000);
+        }
+      } catch (err) {
+        btn.textContent = "複製失敗";
+      }
+    }
+  </script>
 </body>
 </html>
