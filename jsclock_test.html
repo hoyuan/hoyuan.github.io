@@ -10,7 +10,7 @@
     .label { font-weight: bold; }
     .countdown { font-size: 28px; margin-top: 5px; }
     .small { font-size: 16px; margin-left: 10px; }
-    button { margin: 5px 0; padding: 5px 10px; }
+    button, input[type=button] { margin: 5px 5px 5px 0; padding: 5px 10px; }
   </style>
 </head>
 <body onload="initClocks()">
@@ -33,6 +33,7 @@
     <input type="number" id="diffInput" size="5">
     <input type="button" value="Set" onclick="setDiff()">
     <input type="button" value="歸零秒差" onclick="resetDiff()">
+    <input type="button" value="歸零公司時間" onclick="resetCompanyTimeToMidnight()">
   </form>
 
   <script>
@@ -104,6 +105,14 @@
     function resetDiff() {
       setCookie('setdiffV', 0);
       document.getElementById('diffInput').value = 0;
+    }
+
+    function resetCompanyTimeToMidnight() {
+      const now = new Date();
+      const totalSeconds = now.getHours() * 3600 + now.getMinutes() * 60 + now.getSeconds();
+      const setdiff = -totalSeconds;
+      setCookie('setdiffV', setdiff);
+      document.getElementById('diffInput').value = setdiff;
     }
 
     function copyCompanyTime() {
