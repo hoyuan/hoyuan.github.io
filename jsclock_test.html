@@ -93,36 +93,42 @@
       return null;
     }
 
-
     function copyCompanyTime() {
       const timeInput = document.getElementById("companyTimeRaw");
+      const copyBtn = document.getElementById("copyBtn");
       timeInput.select();
       timeInput.setSelectionRange(0, 99999); // for mobile
+
       try {
         const success = document.execCommand("copy");
-        if (success) ;//alert("已複製 Company 時間: " + timeInput.value);
-        else alert("複製失敗，請手動複製");
+        if (success) {
+          copyBtn.textContent = "已複製 Company 時間";
+          copyBtn.disabled = true;
+          setTimeout(() => {
+            copyBtn.textContent = "複製 Company 時間";
+            copyBtn.disabled = false;
+          }, 2000);
+        } else {
+          copyBtn.textContent = "複製失敗";
+        }
       } catch (err) {
-        alert("複製失敗：" + err);
+        copyBtn.textContent = "複製失敗";
       }
     }
 
-function resetSetdiff() {
-  doCookieSetup('setdiffV', 0);
-  const resetBtn = event.target;
-  resetBtn.value = "已歸零";
-  resetBtn.disabled = true;
-  setTimeout(() => {
-    resetBtn.value = "歸零秒差";
-    resetBtn.disabled = false;
-  }, 2000);
-}    
+    function resetSetdiff() {
+      doCookieSetup('setdiffV', 0);
+      setTimeout(() => {
+        startTime(); // 立即更新畫面
+      }, 100);
+    }
   </script>
 </head>
 
 <body style="background-color:black; color:white;" onload="startTime()">
   <div>
-    <strong>Phone:</strong> <div id="clockT"></div>
+    <strong>Phone:</strong>
+    <div id="clockT"></div>
     <div id="setdiff"></div>
   </div>
   <br>
@@ -130,7 +136,7 @@ function resetSetdiff() {
     <strong>Company:</strong>
     <div id="clockD"></div>
     <input type="text" id="companyTimeRaw" style="opacity:0; position:absolute; left:-9999px;" readonly />
-    <button onclick="copyCompanyTime()">複製 Company 時間e</button>
+    <button id="copyBtn" onclick="copyCompanyTime()">複製 Company 時間</button>
     <div id="clockM"></div>
     <div id="clockE"></div>
   </div>
@@ -143,6 +149,5 @@ function resetSetdiff() {
     <input type="button" value="Set" onclick="doCookieSetup('setdiffV', this.form.cValue.value)" />
     <input type="button" value="歸零秒差" onclick="resetSetdiff()" />
   </form>
-
 </body>
 </html>
