@@ -75,33 +75,38 @@ document.onkeydown= handleKeyPress
 function T29_85K_280reload(){
    document.getElementById("camaraT29_85K_280").src="https://cctv-ss05.thb.gov.tw:443/T29-85K+280?ts=1786961281167";
 }
-
 function T29_85K_850reload(){
    document.getElementById("camaraT29_85K_850").src="https://cctv-ss05.thb.gov.tw:443/T29-85K+850?ts=1786962690077";
 }
-function TP2reload(){
-   document.getElementById("camara2").src="https://cctvn.freeway.gov.tw/abs2mjpg/bmjpg?camera=13510";
-}
-function TTTT2reload(){
-   document.getElementById("camara2").src="";
-}
-function ChangeMediaC(){
+function ChangeMediaA(){
 	var d = new Date();
 	var t = d.getTime();
 
-
   document.getElementById('camaraT29_85K_280').src = "https://cctv-ss05.thb.gov.tw:443/T29-85K+280?ts="+t;
-
   document.getElementById('camaraT29_85K_850').src = "https://cctv-ss05.thb.gov.tw:443/T29-85K+850?ts="+t;
-
-  document.getElementById('camaraTP2').src = "https://cctvn.freeway.gov.tw/abs2mjpg/bmjpg?camera=13510&ns="+t;
-  
 }
-var reloadcamA = setInterval("ChangeMediaC()",7800);
+var reloadcamA = setInterval("ChangeMediaA()",7800);
 
 
 
 
+
+
+
+function T29_91K_200reload(){
+   document.getElementById("camaraT29_91K_200").src="https://cctv-ss05.thb.gov.tw:443/T29-91K+200?ts=1786967815627";
+}
+function T29_92K_050reload(){
+   document.getElementById("camaraT29_92K_050").src="https://cctv-ss05.thb.gov.tw:443/T29-92K+050?ts=1786967994167";
+}
+function ChangeMediaB(){
+	var d = new Date();
+	var t = d.getTime();
+
+  document.getElementById('camaraT29_91K_200').src = "https://cctv-ss05.thb.gov.tw:443/T29-91K+200?ts="+t;
+  document.getElementById('camaraT29_92K_050').src = "https://cctv-ss05.thb.gov.tw:443/T29-92K+050?ts="+t;
+}
+var reloadcamB = setInterval("ChangeMediaB()",8000);
 
 
 
@@ -192,15 +197,11 @@ function onYouTubeIframeAPIReady() {
 </td>
 <td align="center">
   <img src="" alt="Loading..." name="camara2" width="450" height="335" border="0" id="camara2" onclick="reload()"/>
-<br>(<a href="">大樹a</a>)
-
+<br>(<a href="">全家 (兩區之間)</a>)
 </td>
-
-
 <td align="center">
   <img src="https://cctv-ss05.thb.gov.tw:443/T29-85K+280?ts=1786961281167" alt="Loading..." name="camaraT29_85K_280" width="450" height="335" border="0" id="camaraT29_85K_280" onclick="T29_85K_280reload()"/>
 <br>(<a href="https://cctv-ss05.thb.gov.tw:443/T29-85K+280?ts=1786961281167">台29線85K+280</a>)
-
 </td>
 
 
@@ -214,17 +215,12 @@ function onYouTubeIframeAPIReady() {
 </td>
 <td align="center">
   <img src="" alt="Loading..." name="camara2" width="450" height="335" border="0" id="camara2" onclick="reload()"/>
-<br>(<a href="">大樹b</a>)
-
+<br>(<a href="">姑山倉庫附近 (昇輝機車行)</a>)
 </td>
-
-
 <td align="center">
   <img src="https://cctv-ss05.thb.gov.tw:443/T29-85K+850?ts=1786962690077" alt="Loading..." name="camaraT29_85K_850" width="450" height="335" border="0" id="camaraT29_85K_850" onclick="T29_85K_850reload()"/>
 <br>(<a href="https://cctv-ss05.thb.gov.tw:443/T29-85K+850?ts=1786962690077">台29線85K+850</a>)
-
 </td>
-
 
 
 
@@ -232,39 +228,33 @@ function onYouTubeIframeAPIReady() {
 
 <tr>
 <td>
-  基隆
+  大樹
 </td>
 <td align="center">
   <img src="" alt="Loading..." name="camara2" width="450" height="335" border="0" id="camara2" onclick="reload()"/>
-<br>(<a href="">國1</a>)
-
+<br>(<a href="">竹寮綠陽山莊附近</a>)
 </td>
-
-
 <td align="center">
-  <img src="https://cctvn.freeway.gov.tw/abs2mjpg/bmjpg?camera=10000" alt="Loading..." name="camaraKL2" width="450" height="335" border="0" id="camaraKL2" onclick="KL2reload()"/>
-<br>(<a href="https://cctvn.freeway.gov.tw/abs2mjpg/bmjpg?camera=10000">國1 基隆</a>)
-
+  <img src="https://cctv-ss05.thb.gov.tw:443/T29-91K+200?ts=1786962690077" alt="Loading..." name="camaraT29_91K_200" width="450" height="335" border="0" id="camaraT29_91K_200" onclick="T29_91K_200reload()"/>
+<br>(<a href="https://cctv-ss05.thb.gov.tw:443/T29-91K+200?ts=1786962690077">台29線91K+200</a>)
 </td>
+
+
+
+
 
 <tr>
 <td>
-  台北
+  大樹
 </td>
 <td align="center">
   <img src="" alt="Loading..." name="camara2" width="450" height="335" border="0" id="camara2" onclick="reload()"/>
-<br>(<a href="">國1</a>)
-
+<br>(<a href="">三和瓦窯</a>)
 </td>
-
-
 <td align="center">
-  <img src="https://cctvn.freeway.gov.tw/abs2mjpg/bmjpg?camera=13510" alt="Loading..." name="camaraTP2" width="450" height="335" border="0" id="camaraTP2" onclick="TP2reload()"/>
-<br>(<a href="https://cctvn.freeway.gov.tw/abs2mjpg/bmjpg?camera=13510">國1 泰山</a>)
-
+  <img src="https://cctv-ss05.thb.gov.tw:443/T29-92K+050?ts=1786962690077" alt="Loading..." name="camaraT29_92K_050" width="450" height="335" border="0" id="camaraT29_92K_050" onclick="T29_92K_050reload()"/>
+<br>(<a href="https://cctv-ss05.thb.gov.tw:443/T29-92K+050?ts=1786962690077">台29線91K+200</a>)
 </td>
-
-
 
 
 
