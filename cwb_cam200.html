@@ -112,6 +112,38 @@ var reloadcamB = setInterval("ChangeMediaB()",8000);
 
 
 
+function T29_94K_250reload(){
+   document.getElementById("camaraT29_94K_250").src="https://cctv-ss05.thb.gov.tw:443/T29-94K+250?ts=1786967815627";
+}
+function T1E_8K_700reload(){
+   document.getElementById("camaraT29_92K_050").src="https://cctv-ss04.thb.gov.tw:443/T1E-8K+700?ts=1786969693080";
+}
+function ChangeMediaC(){
+	var d = new Date();
+	var t = d.getTime();
+
+  document.getElementById('camaraT29_94K_250').src = "https://cctv-ss05.thb.gov.tw:443/T29-91K+200?ts="+t;
+  document.getElementById('camaraT1E_8K_700').src = "https://cctv-ss04.thb.gov.tw:443/T1E-8K+700?ts="+t;
+}
+var reloadcamC = setInterval("ChangeMediaC()",8200);
+
+
+
+
+
+
+
+function SanshangSt_reload(){
+   document.getElementById("camaraSanshangSt").src="https://cctv4.kctmc.nat.gov.tw/75f7e057/snapshot?t=1653614614142";
+}
+function ChangeMediaD(){
+	var d = new Date();
+	var t = d.getTime();
+
+  document.getElementById('camaraSanshangSt').src = "https://cctv4.kctmc.nat.gov.tw/75f7e057/snapshot?t="+t;
+}
+var reloadcamD = setInterval("ChangeMediaD()",8400);
+
 
 
 
@@ -201,7 +233,7 @@ function onYouTubeIframeAPIReady() {
 </td>
 <td align="center">
   <img src="https://cctv-ss05.thb.gov.tw:443/T29-85K+280?ts=1786961281167" alt="Loading..." name="camaraT29_85K_280" width="450" height="335" border="0" id="camaraT29_85K_280" onclick="T29_85K_280reload()"/>
-<br>(<a href="https://cctv-ss05.thb.gov.tw:443/T29-85K+280?ts=1786961281167">台29線85K+280</a>)
+<br>(<a href="https://cctv-ss05.thb.gov.tw:443/T29-85K+280?ts=1786961281167">台29線</a>)
 </td>
 
 
@@ -219,7 +251,7 @@ function onYouTubeIframeAPIReady() {
 </td>
 <td align="center">
   <img src="https://cctv-ss05.thb.gov.tw:443/T29-85K+850?ts=1786962690077" alt="Loading..." name="camaraT29_85K_850" width="450" height="335" border="0" id="camaraT29_85K_850" onclick="T29_85K_850reload()"/>
-<br>(<a href="https://cctv-ss05.thb.gov.tw:443/T29-85K+850?ts=1786962690077">台29線85K+850</a>)
+<br>(<a href="https://cctv-ss05.thb.gov.tw:443/T29-85K+850?ts=1786962690077">台29線</a>)
 </td>
 
 
@@ -236,8 +268,9 @@ function onYouTubeIframeAPIReady() {
 </td>
 <td align="center">
   <img src="https://cctv-ss05.thb.gov.tw:443/T29-91K+200?ts=1786962690077" alt="Loading..." name="camaraT29_91K_200" width="450" height="335" border="0" id="camaraT29_91K_200" onclick="T29_91K_200reload()"/>
-<br>(<a href="https://cctv-ss05.thb.gov.tw:443/T29-91K+200?ts=1786962690077">台29線91K+200</a>)
+<br>(<a href="https://cctv-ss05.thb.gov.tw:443/T29-91K+200?ts=1786962690077">台29線</a>)
 </td>
+
 
 
 
@@ -253,7 +286,59 @@ function onYouTubeIframeAPIReady() {
 </td>
 <td align="center">
   <img src="https://cctv-ss05.thb.gov.tw:443/T29-92K+050?ts=1786962690077" alt="Loading..." name="camaraT29_92K_050" width="450" height="335" border="0" id="camaraT29_92K_050" onclick="T29_92K_050reload()"/>
-<br>(<a href="https://cctv-ss05.thb.gov.tw:443/T29-92K+050?ts=1786962690077">台29線91K+200</a>)
+<br>(<a href="https://cctv-ss05.thb.gov.tw:443/T29-92K+050?ts=1786962690077">台29線</a>)
+</td>
+
+
+
+
+
+
+<tr>
+<td>
+  大樹
+</td>
+<td align="center">
+  <img src="" alt="Loading..." name="camara2" width="450" height="335" border="0" id="camara2" onclick="reload()"/>
+<br>(<a href=""><font size="36">鼎峯牛排</font><br><font size="36">近高屏橋</font></a>)
+</td>
+<td align="center">
+  <img src="https://cctv-ss05.thb.gov.tw:443/T29-94K+250?ts=1786967815627" alt="Loading..." name="camaraT29_92K_050" width="450" height="335" border="0" id="camaraT29_92K_050" onclick="T29_92K_050reload()"/>
+<br>(<a href="https://cctv-ss05.thb.gov.tw:443/T29-94K+250?ts=1786967815627">台29線</a>)
+</td>
+
+
+
+
+<tr>
+<td>
+  大寮
+</td>
+<td align="center">
+  <img src="" alt="Loading..." name="camara2" width="450" height="335" border="0" id="camara2" onclick="reload()"/>
+<br>(<a href=""><font size="36">鳳信有線</font></a>)
+</td>
+<td align="center">
+  <img src="https://cctv-ss04.thb.gov.tw:443/T1E-8K+700?ts=1786969693080" alt="Loading..." name="camaraT29_92K_050" width="450" height="335" border="0" id="camaraT29_92K_050" onclick="T29_92K_050reload()"/>
+<br>(<a href="https://cctv-ss04.thb.gov.tw:443/T1E-8K+700?ts=1786969693080">台1戊線</a>)
+</td>
+
+
+
+
+
+
+<tr>
+<td>
+  鳳山
+</td>
+<td align="center">
+  <img src="" alt="Loading..." name="camara2" width="450" height="335" border="0" id="camara2" onclick="reload()"/>
+<br>(<a href=""><font size="36">三商街與</font><br><font size="36">五甲交流道</font></a>)
+</td>
+<td align="center">
+  <img src="https://cctv4.kctmc.nat.gov.tw/75f7e057/snapshot?t=1653614614142" alt="Loading..." name="camaraSanshangSt" width="450" height="335" border="0" id="camaraSanshangSt" onclick="SanshangSt_reload()"/>
+<br>(<a href="https://cctv4.kctmc.nat.gov.tw/75f7e057/snapshot?t=1653614614142">五甲</a>)
 </td>
 
 
