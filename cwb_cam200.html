@@ -129,6 +129,9 @@ var reloadcamB = setInterval("ChangeMediaB()",8000);
 
 
 
+function C200reload(){
+   document.getElementById("camaraC200").src="https://cctv-ss05.thb.gov.tw:443/T29-85K+280?ts=1786961281167";
+}
 
 
 
@@ -144,6 +147,9 @@ function TTTT2reload(){
 function ChangeMediaC(){
 	var d = new Date();
 	var t = d.getTime();
+
+
+  document.getElementById('camaraC200').src = "https://cctv-ss05.thb.gov.tw:443/T29-85K+280?ts=1786961281167&ns="+t;
 
   document.getElementById('camaraKL2').src = "https://cctvn.freeway.gov.tw/abs2mjpg/bmjpg?camera=10000&ns="+t;
 
@@ -351,6 +357,26 @@ function onYouTubeIframeAPIReady() {
   </td>
   <td>
   </td>
+
+
+<tr>
+<td>
+  大樹
+</td>
+<td align="center">
+  <img src="" alt="Loading..." name="camara2" width="450" height="335" border="0" id="camara2" onclick="reload()"/>
+<br>(<a href="">大樹a</a>)
+
+</td>
+
+
+<td align="center">
+  <img src="https://cctv-ss05.thb.gov.tw:443/T29-85K+280?ts=1786961281167" alt="Loading..." name="camaraC200" width="450" height="335" border="0" id="camaraC200" onclick="C200reload()"/>
+<br>(<a href="https://cctv-ss05.thb.gov.tw:443/T29-85K+280?ts=1786961281167">大樹b</a>)
+
+</td>
+
+
 
 
 
