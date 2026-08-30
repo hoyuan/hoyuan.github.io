@@ -18,6 +18,16 @@
             --text-secondary: #8E8E93;
             --separator: #C6C6C8;
             --blue: #007AFF;
+            /* --- 字型參數預設值，可透過 URL 參數覆蓋 --- */
+            --font-family-base: "Microsoft JhengHei", "微軟正黑體", -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-scale: 1;
+            --font-size-base: 20px;
+            --font-size-body: calc(var(--font-size-base) * var(--font-scale));
+            --font-size-h1: calc(var(--font-size-base) * var(--font-scale));
+            --font-size-meta: calc(var(--font-size-base) * var(--font-scale));
+            --font-size-item: calc(var(--font-size-base) * var(--font-scale));
+            --font-size-icon: calc(var(--font-size-base) * var(--font-scale));
+            --font-size-chevron: calc(var(--font-size-base) * var(--font-scale));
         }
 
         /* 自動支援 iPhone 深色模式 (Dark Mode) */
@@ -34,7 +44,8 @@
 
         /* --- 基礎排版 --- */
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "SF Pro TC", "SF Pro Text", "Helvetica Neue", sans-serif;
+            font-family: var(--font-family-base);
+            font-size: var(--font-size-body);
             background-color: var(--bg-color);
             color: var(--text-primary);
             margin: 0;
@@ -51,20 +62,20 @@
             margin: 24px 0 16px 4px;
         }
         h1 {
-            font-size: 34px;
+            font-size: var(--font-size-h1);
             font-weight: 700;
             margin: 0;
             letter-spacing: 0.41px;
         }
         .ip-widget {
-            font-size: 13px;
+            font-size: var(--font-size-meta);
             color: var(--text-secondary);
             text-align: right;
         }
 
         /* --- iOS 分組列表 (Inset Grouped List) --- */
         .section-title {
-            font-size: 13px;
+            font-size: var(--font-size-meta);
             color: var(--text-secondary);
             text-transform: uppercase;
             margin: 24px 0 8px 16px;
@@ -85,7 +96,7 @@
             min-height: 44px; /* 符合 HIG 最小觸控熱區 */
             text-decoration: none;
             color: var(--text-primary);
-            font-size: 17px;
+            font-size: var(--font-size-item);
             border-bottom: 0.5px solid var(--separator);
             transition: background-color 0.2s ease;
         }
@@ -106,13 +117,13 @@
         }
 
         .item-icon {
-            font-size: 22px; /* 用 Emoji 暫代 Icon */
+            font-size: var(--font-size-icon); /* 用 Emoji 暫代 Icon */
         }
 
         /* iOS 右側小箭頭 */
         .chevron::after {
             content: "›";
-            font-size: 24px;
+            font-size: var(--font-size-chevron);
             color: var(--text-secondary);
             font-family: "Helvetica Neue";
             line-height: 0;
@@ -185,6 +196,24 @@
     <!-- 載入你原本的 jQuery (抓 IP 用) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
+        // 允許透過 URL 參數調整整頁字型
+        // 範例：
+        //   index_iphone.html?fontScale=1.15
+        //   index_iphone.html?fontFamily=Arial,%20sans-serif&fontScale=0.95
+        (function applyFontParams() {
+            const params = new URLSearchParams(window.location.search);
+            const fontScale = parseFloat(params.get("fontScale") || params.get("scale"));
+            const fontFamily = params.get("fontFamily") || params.get("font");
+
+            if (!Number.isNaN(fontScale) && fontScale > 0) {
+                document.documentElement.style.setProperty("--font-scale", String(fontScale));
+            }
+
+            if (fontFamily) {
+                document.documentElement.style.setProperty("--font-family-base", fontFamily);
+            }
+        })();
+
         // IP 抓取功能保留
         $.getJSON("https://api.ipify.org?format=json", function(data) { 
             $("#ipaddr").html(data.ip);     
