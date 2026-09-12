@@ -7,6 +7,7 @@
     body { background-color: black; color: white; font-family: sans-serif; }
     #clockT { font-size: 24px; }
     #clockD { font-size: 250px; }
+    #clockD2 { font-size: 250px; }
     .label { font-weight: bold; }
     .countdown { font-size: 28px; margin-top: 5px; }
     .small { font-size: 16px; margin-left: 10px; }
@@ -36,6 +37,40 @@
     <br><br><input type="button" value="歸零時間" onclick="resetCompanyTimeToMidnight()">
   </form>
 
+  <div style="margin-top: 20px;">
+    <div><br></div>
+    <div><br></div>
+    <div><br></div>
+    <div><br></div>
+    <div><br></div>
+    <div><br></div>
+    <div><br></div>
+    <div><br></div>
+    <div><br></div>
+    <div><br></div>
+    <div><br></div>
+    <div><br></div>
+    <div><br></div>
+    <div><br></div>
+    <div><br></div>
+    <div><br></div>
+    <div><br></div>
+    <div><br></div>
+    <div><br></div>
+    <div><br></div>
+    <div><br></div>
+    <div><br></div>
+  </div>
+
+
+  <div style="margin-top: 20px;">
+    <span class="label">Company:</span> <span id="clockD2"></span><br>
+    <input id="companyTimeRaw" type="text" readonly style="opacity:0; position:absolute; left:-9999px;">
+    <div id="clockM2"></div>
+    <div id="clockE2"></div>
+  </div>
+
+  
   <script>
     function initClocks() {
       updateClocks();
@@ -63,6 +98,7 @@
       // 公司時間
       const company = new Date(now.getTime() + setdiff * 1000);
       document.getElementById('clockD').textContent = formatTime(company);
+      document.getElementById('clockD2').textContent = formatTime(company);
       document.getElementById('companyTimeRaw').value = formatTime(company);
 
       // 倒數午休
@@ -70,11 +106,15 @@
       const midRemain = getCountdown(company, noon);
       document.getElementById('clockM').innerHTML = (midRemain.total > 0 && company.getHours() === 12)
         ? `<span class="label">CompMid:</span><br><span class="countdown">${midRemain.time}</span>` : "";
+      document.getElementById('clockM2').innerHTML = (midRemain.total > 0 && company.getHours() === 12)
+        ? `<span class="label">CompMid:</span><br><span class="countdown">${midRemain.time}</span>` : "";
 
       // 倒數下班
       const end = new Date(company); end.setHours(16, 50, 0, 0);
       const endRemain = getCountdown(company, end);
       document.getElementById('clockE').innerHTML = (endRemain.total > 0 && company.getHours() >= 13 && company.getHours() <= 16)
+        ? `<span class="label">CompEnd:</span><br><span class="countdown">${endRemain.time}</span>` : "";
+      document.getElementById('clockE2').innerHTML = (endRemain.total > 0 && company.getHours() >= 13 && company.getHours() <= 16)
         ? `<span class="label">CompEnd:</span><br><span class="countdown">${endRemain.time}</span>` : "";
 
       setTimeout(updateClocks, 500);
